@@ -99,6 +99,7 @@
           <td>61.13</td>
         </tr>
       </table>
+      <img id="statistics_2024" src="/img/statistics_2024.png" alt="statistics_image">
       <div class="table-caption">Placement Statistics for 2023-2024</div>
  
     </div>
@@ -186,7 +187,43 @@
       <script>
         // for media screen
         $(window).resize(function () {
-          if ($(window).width() < 770) {
+          if ($(window).width() < 500) {
+            $('#statistics_2024').css('height', '15rem')
+            $('#branch-wise').css('width', '450');
+            $('#branch-wise').css('height', 'auto');
+            $('#degree-wise').css('width', '450');
+            $('#title').css('paddingTop', '35%')
+            $('#box1').css('width', '25%')
+            $('#box1').css('paddingBottom', '5%')
+            $('#box2').css('width', '25%')
+            $('#box2').css('paddingBottom', '5%')
+            $('#box3').css('width', '25%')
+            
+            
+            // $('#x').css('overflow', 'visible')
+            // $('#box3').css('paddingBottom','5%')
+            // add class to $('.d-flex')
+            $('.d-flex').addClass('align-items-center');
+          }
+          else if ($(window).width() < 360) {
+            $('#statistics_2024').css('height', '13rem')
+            $('#branch-wise').css('width', '450');
+            $('#branch-wise').css('height', 'auto');
+            $('#degree-wise').css('width', '450');
+            $('#title').css('paddingTop', '35%')
+            $('#box1').css('width', '25%')
+            $('#box1').css('paddingBottom', '5%')
+            $('#box2').css('width', '25%')
+            $('#box2').css('paddingBottom', '5%')
+            $('#box3').css('width', '25%')
+            
+            
+            // $('#x').css('overflow', 'visible')
+            // $('#box3').css('paddingBottom','5%')
+            // add class to $('.d-flex')
+            $('.d-flex').addClass('align-items-center');
+          }
+          else if ($(window).width() < 770) {
             console.log("mobile");
             $('#branch-wise').css('width', '450');
             $('#branch-wise').css('height', 'auto');
@@ -198,11 +235,13 @@
             $('#box2').css('paddingBottom', '5%')
             $('#box3').css('width', '25%')
             
+            
             // $('#x').css('overflow', 'visible')
             // $('#box3').css('paddingBottom','5%')
             // add class to $('.d-flex')
             $('.d-flex').addClass('align-items-center');
-          } else {
+          } 
+          else {
             console.log("desktop");
             $('#branch-wise').css('width', '500px');
             $('#degree-wise').css('width', 'auto');
