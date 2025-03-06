@@ -581,3 +581,50 @@ abbr {
 body {
     font-family: "Inter", sans-serif;
 }
+
+/* Add these styles to your CSS file */
+
+.announcement-bar {
+  background: #0277bd;
+  color: white;
+  padding: 8px 0;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  
+}
+
+.announcement-content {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite;
+  padding-left: 100%;
+}
+.announcement-content:hover {
+    animation-play-state: paused;
+  }
+
+.announcement-content span {
+  margin-right: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.announcement-content span a {
+  color: white;
+  text-decoration: underline;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Adjust the existing in-spacing class */
+.in-spacing {
+  margin-top: 0;
+}
