@@ -136,3 +136,164 @@ table {
     transform: scale(0.8);
   }
 }
+
+/* Professional Table Styling */
+#my-table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: Inter, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#my-table .my-th {
+    background-color: #1a73e8;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 500;
+}
+
+#my-table th,
+#my-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+#my-table tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+#my-table tr:last-of-type td {
+    border-bottom: 2px solid #1a73e8;
+}
+
+#my-table tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #my-table {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    
+    #my-table th,
+    #my-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Optional: Style for the numbers/data cells */
+#my-table td:nth-child(4),
+#my-table td:nth-child(5),
+#my-table td:nth-child(6),
+#my-table td:nth-child(7),
+#my-table td:nth-child(8),
+#my-table td:nth-child(9),
+#my-table td:nth-child(10),
+#my-table td:nth-child(11) {
+    text-align: right;
+}
+
+/* Style for numbers with commas */
+#my-table td:nth-child(10),
+#my-table td:nth-child(11) {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Common Table Styles */
+.table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    font-family: Inter, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.my-th, 
+.table thead tr {
+    background-color: #1a73e8;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Cell Styles */
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Row Styles */
+.table tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* Table Caption Styles */
+.table-caption {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #1a73e8;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* Numeric Data Alignment */
+.table td:not(:nth-child(-n+3)) {
+    text-align: right;
+}
+
+/* CTC Values Styling */
+.table td:nth-last-child(-n+2) {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .table {
+        width: 100%;
+        font-size: 0.8em;
+        margin: 15px auto;
+    }
+    
+    .table th,
+    .table td {
+        padding: 8px 10px;
+    }
+    
+    .table-caption {
+        font-size: 1em;
+    }
+}
+
+/* Table Container Styles */
+.table-container {
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+/* Small Tables Specific Styles */
+#my-table-2 {
+    width: auto;
+    min-width: 300px;
+    max-width: 600px;
+}

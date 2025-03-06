@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="img/icons/logo.png" type="image/icon">
   <link rel="stylesheet" href="/css/statistics.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
   <!-- google charts api -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <title>Placement Statistics</title>
@@ -17,7 +18,24 @@
 
 
     <div class="container container1" id="title" style="padding-top: 13%;">
-      <div class="text-center h1" style="padding-top: 4%;">Statistics</div>
+      <div class="text-center" style="
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: #1a237e;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 4% 0;
+        position: relative;
+        margin-bottom: 2rem;">
+        Statistics
+        <div style="
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(90deg, #00ffe0, #1a237e);
+          margin: 1rem auto 0;
+          border-radius: 2px;">
+        </div>
+      </div>
     </div>
 
     <div class="container container2 mt-5">
@@ -75,37 +93,229 @@
       </div>
     </div>
 
-    <div class="text-center mb-5"
-      style="color: black; font-weight: 450;font: Inter;font-style: normal; font-size: 1.5rem;">Percentage of students
-      placed</div>
+    <div class="text-center mb-5" style="
+    color: #1a237e;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 1.8rem;
+    padding: 15px;
+    margin: 20px auto;
+    border-bottom: 3px solid #00ffe0;
+    max-width: 70%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  ">
+    Percentage of Students Placed
+    <br>
+    <span style="font-size: 1.4rem; color: #424242;"></span>
+  </div>
 
 
     <div class="d-flex flex-column align-items-center  justify-content-center mb-3 " style="padding-left: 3%;">
-      <table class="table mx-auto" id="my-table">
-        <tr class="my-th">
-          <th scope="col">Details</th>
-          <th scope="col">Numbers</th>
-        </tr>
-        <tr class="table-row">
-          <td>No. of students registered for the Placements</td>
-          <td>319</td>
-        </tr>
-        <tr>
-          <td>No. of offers received</td>
-          <td>195</td>
-        </tr>
-        <tr>
-          <td>Percentage of offers received</td>
-          <td>61.13</td>
-        </tr>
-      </table>
-      <img id="statistics_2025" src="/img/statistics_2025.jpg" alt="statistics_image">
-      <div class="table-caption">Placement Statistics for 2023-2024</div>
+      <div class="table-container">
+        <table class="table mx-auto" id="my-table">
+          <tr class="my-th">
+            <th scope="col">Details</th>
+            <th scope="col">Numbers</th>
+          </tr>
+          <tr class="table-row">
+            <td>No. of students registered for the Placements</td>
+            <td>319</td>
+          </tr>
+          <tr>
+            <td>No. of offers received</td>
+            <td>195</td>
+          </tr>
+          <tr>
+            <td>Percentage of offers received</td>
+            <td>61.13</td>
+          </tr>
+        </table>
+      </div>
+      <div class="text-center mb-5" style="
+        color: #1a237e;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 1.8rem;
+        padding: 15px;
+        margin: 20px auto;
+        border-bottom: 3px solid #00ffe0;
+        max-width: 90%;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      ">
+        UG & PG Department wise Placed & CTC Details- AY 2024-25
+        <br>
+        <span style="font-size: 1.4rem; color: #424242;">(As of Jan-31-2025)</span>
+      </div>
+      <div class="table-container">
+        <table class="table mx-auto" id="my-table">
+          <tr class="my-th">
+            <th scope="col">Sl. No.</th>
+            <th scope="col">Programme</th>
+            <th scope="col">Department</th>
+            <th scope="col">Total No. of Students</th>
+            <th scope="col">No. of Eligible Students</th>
+            <th scope="col">No. of Students Placed</th>
+            <th scope="col">No. of Offers</th>
+            <th scope="col">Placement %</th>
+            <th scope="col">Offer %</th>
+            <th scope="col">Average CTC</th>
+            <th scope="col">Maximum CTC</th>
+          </tr>
+          <tr class="table-row">
+            <td>1</td>
+            <td>B.Tech</td>
+            <td>CSE</td>
+            <td>83</td>
+            <td>73</td>
+            <td>39</td>
+            <td>43</td>
+            <td>53.4</td>
+            <td>58.9</td>
+            <td>960,367</td>
+            <td>3,164,200</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>B.Tech</td>
+            <td>CSE(AI)</td>
+            <td>43</td>
+            <td>36</td>
+            <td>11</td>
+            <td>11</td>
+            <td>30.6</td>
+            <td>30.6</td>
+            <td>1,249,244</td>
+            <td>3,164,200</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>B.Tech</td>
+            <td>ECE</td>
+            <td>105</td>
+            <td>72</td>
+            <td>25</td>
+            <td>30</td>
+            <td>34.7</td>
+            <td>41.7</td>
+            <td>1,109,322</td>
+            <td>3,164,200</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>B.Tech</td>
+            <td>MECH</td>
+            <td>71</td>
+            <td>43</td>
+            <td>20</td>
+            <td>22</td>
+            <td>46.5</td>
+            <td>51.2</td>
+            <td>569,917</td>
+            <td>1,219,000</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>B.Tech</td>
+            <td>SM</td>
+            <td>31</td>
+            <td>21</td>
+            <td>6</td>
+            <td>7</td>
+            <td>28.6</td>
+            <td>33.3</td>
+            <td>593,800</td>
+            <td>1,219,000</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>M.Tech</td>
+            <td>CSE(DS&AI)</td>
+            <td>13</td>
+            <td>13</td>
+            <td>6</td>
+            <td>7</td>
+            <td>46.2</td>
+            <td>53.8</td>
+            <td>466,667</td>
+            <td>600,000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>M.Tech</td>
+            <td>ECE(VLSI)</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>75</td>
+            <td>75</td>
+            <td>Stipend 45,000</td>
+            <td>Stipend 45,000</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>M.Tech</td>
+            <td>ECE(CSD)</td>
+            <td>2</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>M.Tech</td>
+            <td>MECH(SM)</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>50.0</td>
+            <td>50.0</td>
+            <td>350,000</td>
+            <td>350,000</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>M.Tech</td>
+            <td>MECH(ESD)</td>
+            <td>4</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>M.Des</td>
+            <td>IPD</td>
+            <td>13</td>
+            <td>10</td>
+            <td>1</td>
+            <td>1</td>
+            <td>10.0</td>
+            <td>10.0</td>
+            <td>350,000</td>
+            <td>350,000</td>
+          </tr>
+        </table>
+      </div>
+      <div class="table-caption">Placement Statistics for 2024-2025</div>
  
     </div>
 
     <div class="d-flex justify-content-around">
-      <div>
+      <div class="table-container">
         <table class="table" id="my-table-2">
           <thead>
             <tr class="my-th">
@@ -137,13 +347,12 @@
             </tr>
           </tbody>
         </table>
-      <div class="table-caption">Branch-wise placement statistics for 2023-2024</div>
-
+        <div class="table-caption">Branch-wise placement statistics for 2023-2024</div>
       </div>
       
 
       <!-- Table-2 -->
-      <div>
+      <div class="table-container">
         <table class="table" id="my-table-2">
           <thead>
             <tr class="my-th">
@@ -170,8 +379,7 @@
             </tr>
           </tbody>
         </table>
-      <div class="table-caption">Course wise placement statistics for 2023-2024</div>
-        
+        <div class="table-caption">Course wise placement statistics for 2023-2024</div>
       </div>
     </div>
     </div>
