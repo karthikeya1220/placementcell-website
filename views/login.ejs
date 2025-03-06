@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <%- include('templates/header-1.ejs') -%>
+
+    <h1 class="container">Login</h1>
+    <div class="container">
+        <div class="studentLogin">
+            <a href="/"><button class="btnStudentLogin">Student Login</button></a>
+        </div>
+        <div class="companyLogin">
+            <label> Company Login</label> <br>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Company code"><br>
+                <input type="password" placeholder="password"> <br>
+            </form>
+            <button class="btnCompanyLogin" type="submit">Login</button>
+            <button class="btnCompanyRegister" >Register</button>
+        </div>
+        
+    </div>
+
+
+
+
+   
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Schedule</title>
+    <link rel="icon" href="img/icons/logo.png" type="image/icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/schedule_and_faq.css">
+    <style>
+        /* Your custom CSS styles go here */
+        
+    </style>
+</head>
+<body>
+    <%- include('templates/header-1.ejs') -%>
+    <!-- The below block is commented as in the future FAQ  blog might be usefull  -->
+   <!-- <div class="faq-box" style="text-align: right;position:absolute;right:5px;top:50%">
+        <div class="faq-container">
+            <h2 class="FAQ">FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item" onClick='toggle("ans1")'>
+                    <h3  class="question">Question 1</h3>
+                    <div  class="answer" id="ans1" style="display: none;">
+                        <p>Answer 1</p>
+                    </div> 
+                </div>
+                <div class="faq-item" onClick='toggle("ans2")'>
+                    <h3  class="question"  >Question 2</h3>
+                    <div class="answer" id="ans2" style="display: none;">
+                        <p>Answer 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="text-animation-container">
+        <div class="text-animation">
+            <a href="https://calendar.google.com/calendar/embed?src=c_6702c549a206e7e63136e56311c7c0c297340c94556ecf3298ca3be3a3da9373%40group.calendar.google.com&ctz=Asia%2FKolkata">Click here to view the Placement Calendar for 2023 to 2024</a>
+        </div>
+    </div>
+    <div class="block_h col-12">
+        <h2 class="schedule">
+            PLACEMENT SCHEDULE
+            <hr>
+        </h2>
+    </div>
+
+    <div class="col-12">
+        <div class="block d-flex flex-column align-items-center" style="height:670px;width:50%;position:relative;left:28%;bottom:8%; overflow: auto;background-color: transparent;">
+            <div class="wrapper" >
+                <ul class="StepProgress">
+                    <li>
+                       <span>DRIVE 1:</span><div class="progress-bar" id="progress-bar-1" style="background-color: #cd6155ba;color: white;border-radius: 10px;"></div>
+                    </li>
+                    <li>
+                       <span>DRIVE 2:</span><div class="progress-bar" id="progress-bar-2" style="background-color: #5685c3ac;color: white;border-radius: 10px;"></div>
+                    </li>
+                    <li>
+                       <span>DRIVE 3:</span><div class="progress-bar" id="progress-bar-3" style="background-color:#3d9d67;color: white;border-radius: 10px;"></div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <%- include('templates/footer-1.ejs') -%>
+
+    <script>
+        var data = [
+            { content: `16 / 08 / 2023`  },
+            { content: `26 / 08 / 2023`  },
+            { content: `20 / 09 / 2023`  },
+            { content: `29 / 09 / 2023`  },
+            { content: `09 / 10 / 2023`  },
+            { content: `20 / 10 / 2023`  },
+        ];
+
+        function loadProgressBars() {
+            var progressBarElements = document.querySelectorAll('.progress-bar');
+            j=0
+            for (var i = 0; i < progressBarElements.length; i++) {
+                progressBarElements[i].textContent = "FROM: "+data[j].content+"  "+"TO: "+data[j+1].content;
+                j+=2;
+            }
+        }
+
+        loadProgressBars();
+        function toggle(answerId) {
+            var answerElement = document.getElementById(answerId);
+            if (answerElement.style.display === "none" || answerElement.style.display === "") {
+                answerElement.style.display = "block";
+            } else {
+                answerElement.style.display = " none";
+            }
+        }
+    </script>
+</body>
+</html>

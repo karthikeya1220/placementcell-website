@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+
+.main {
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 40px;
+  padding-right: 50px;
+}
+
+.header {
+  position: absolute;
+  padding: 60px;
+}
+
+.placement-heading {
+  font: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 31px;
+  /*text-decoration-line: underline;*/
+
+  color: #000000;
+}
+
+.steps {
+  height: 100%;
+  width: 100%;
+  padding-top: 150px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.step {
+  width: 500px;
+  height: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.step-top {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.step-no {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.step-no-inner {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #747474;
+}
+
+.mobile-view {
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.step-heading {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  color: #747474;
+  padding-left: 55px;
+}
+
+.step-body {
+  padding: 20px 20px 20px 50px;
+}
+
+.step-body-inner {
+  word-break: keep-all;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+
+  color: #000000;
+}
+
+#step1{
+  background-color: lightskyblue;
+}
+
+#step2 {
+  margin-top: 230px;
+  background-color: lightgreen;
+}
+
+#step3 {
+  margin-top: 110px;
+  background-color: lightsalmon;
+}
+
+#step4 {
+  margin-top: 260px;
+  background-color: lightgrey;
+}
+
+#step5 {
+  margin-top: 210px;
+  background-color: lightgoldenrodyellow;
+}
+
+#step6 {
+  margin-top: 170px;
+  background-color: lightblue;
+}
+
+#step7 {
+  margin-top: 220px;
+  background-color: lightgreen;
+}
+
+#step8 {
+  margin-top: 200px;
+  background-color: lightpink;
+}
+
+#link {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .main {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    padding-right: 10px;
+  }
+  .header
+  {
+    position: relative;
+    padding : 30px;
+  }
+  .mobile-view {
+    display: block;
+  }
+  .laptop-view {
+    display: none;
+  }
+  .step {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100vw;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  #step2 {
+    margin-top: 40px;
+  }
+  #step3 {
+    margin-top: 40px;
+  }
+  #step4 {
+    margin-top: 40px;
+  }
+  #step5 {
+    margin-top: 40px;
+  }
+  #step6 {
+    margin-top: 40px;
+  }
+  #step7 {
+    margin-top: 40px;
+  }
+  #step8 {
+    margin-top: 40px;
+  }
+  .step-body-inner {
+    word-break: keep-all;
+  }
+   .placement-heading
+  {
+    font-size: 23px;
+  }
+  .step-no-inner
+  {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .step-heading
+  {
+    font-size: 22px;
+  }
+  .step-body-inner
+  {
+    font-size: 17px;
+    position: relative;
+  }
+   .step-no
+  {
+    position: relative;
+  }
+  
+}
+
+
+@media screen and (min-width: 900px) and (max-width : 1050px) {
+  .step {
+    width: 100%;
+    max-width: 47vw;
+  }
+  .main {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    padding-right: 10px;
+  }
+  .header
+  {
+    position: relative;
+  }
+    .step-no
+  {
+    position: relative;
+  }
+  
+}
+

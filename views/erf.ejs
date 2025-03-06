@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/erf.css">
+    <title>ERF</title>
+</head>
+<body>
+    <%- include('templates/header-1.ejs') -%>
+
+    <div class="container p-4">
+        <div class="container p-4">
+            <!-- <a href="#erf"><button type="button"  class="btn btn-light">ERF</button></a> -->
+            <a href="/enquiry"><button type="button" class="btn btn-light">Enquiry Form</button></a>
+        </div>
+        <div class="jumbotron jumbotron-fluid" id="erf">
+        <!-- <div class="jumbotron jumbotron-fluid bg-cover" id="erf" style="padding: 2rem; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(https://placeimg.com/1000/480/nature)"> -->
+            <div class="container">
+                <h1 class="display-4"><b>Employer Registration Form</b></h1>
+                <p class="lead"><b>(ERF 20-21) - IIITDM Kancheepuram</b></p>
+
+            </div>
+            <hr>
+            <div class="container">
+                <form action="/erf" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name of the company</label>
+                        <input type="text" class="form-control" name="companyName" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <label for="exampleInputEmail1">Preferred Dates for Placement</label>
+                    <div class="p-1 m-3">
+                        <div class="form-check">
+                            <input class="form-check-input" name="prefDate" type="checkbox" value="17-21 August 2020 (Registration before 30 July 2020)" id="dopCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                17-21 August 2020 (Registration before 30 July 2020)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="prefDate" type="checkbox" value="21-25 September 2020 (Registration before 30 August 2020)" id="dopCheck2">
+                            <label class="form-check-label" for="defaultCheck1">
+                                21-25 September 2020 (Registration before 30 August 2020)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="prefDate" type="checkbox" value="26-30 October 2020 (Registration before 30 September 2020)" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                26-30 October 2020 (Registration before 30 September 2020)
+        
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="prefDate" type="checkbox" value="16-20 November 2020 (Registration before 30 October 2020)" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                16-20 November 2020 (Registration before 30 October 2020)
+        
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="prefDate"  type="checkbox" value="Any other date after 20 NOVEMBER" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Any other date after 20 NOVEMBER
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">Contact person Name </label>
+                          <input type="text" name="fullname" class="form-control" id="inputEmail4" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Mobile Number</label>
+                          <input type="number" name="mobileNumber" class="form-control" id="inputPassword4" placeholder="Mobile Number" required>
+                        </div>
+                      </div>
+                      <label for="exampleInputEmail1">Type of offer</label>
+                    <div class="p-1 m-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfOffer" id="exampleRadios1" value="Regular" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Regular
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeOfOffer" id="exampleRadios2" value="Internship">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Internship
+                            </label>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Job Designation offered</label>
+                        <input type="text" name="jobDesignationOffered" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+    
+                    <label for="exampleInputEmail1">Necessary qualification of students</label>
+                    <div class="p-1 m-3">
+                        <div class="form-check">
+                            <input class="form-check-input" name="qualification" type="checkbox" value="B.Tech - 4 Years" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                B.Tech - 4 Years
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="qualification" type="checkbox" value="Dual Degree (B.Tech + M.Tech) - 5 Years" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Dual Degree (B.Tech + M.Tech) - 5 Years
+    
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="qualification" type="checkbox" value="M.Tech - 2 Years" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                M.Tech - 2 Years
+    
+        
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="qualification" type="checkbox" value="Ph D" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Ph D
+    
+        
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Total CTC (Fixed Cost + Variable + Perks) </label>
+                        <input type="number" name="ctc" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Stipend for Internships</label>
+                        <input type="number" name="stipentInternship" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Job Description</label>
+                        <input type="file" name="jobDescription" class="form-control-file" id="exampleFormControlFile1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Selection Process</label>
+                        <textarea type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group" style="padding-right: 75%;">
+                        <label for="exampleInputEmail1">Tentative Date of Visit</label>
+                        <input type="date" name="tentativeDate" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group" align=center>
+                        <button type="submit" class="btn btn-primary" onsubmit="return checkbox_validate()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <%- include('templates/footer-1.ejs') -%>
+
+</body>
+
+</html>

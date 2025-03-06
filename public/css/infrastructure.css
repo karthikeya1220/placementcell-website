@@ -1,0 +1,162 @@
+.overlay1 {
+   
+    background-image: url(https://www.iiitdm.ac.in/placement/resources/background.jpg);
+    
+    height: 400px;
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay1 .text-center{
+    /* margin-top: 15rem; */
+    color: white;
+    padding-top: 180px;
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif;"
+    box-align: center;
+    text-align: center;
+    border: 10px;
+    padding: 20px;
+    background: #00264d;
+    text-shadow: 0 0 10px black;
+  }
+
+.overlay2 {
+   
+    background-image: url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+.overlay21 {
+   
+    background-image: url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80);
+  
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overlay23 {
+   
+    background-image: url(https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80);
+  
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay3 {
+   
+    background-image: url(https://images.unsplash.com/photo-1531824475211-72594993ce2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay4 {
+   
+    background-image: url(https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  
+    
+    opacity: 0.9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.carousel-item img{
+
+	height: 40vh;
+}
+
+
+
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner {
+
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    margin-bottom: 2%;
+    margin-top: 2%;
+
+    padding: 2%;
+
+    box-shadow: 0 0 15px grey;
+}
+
+.outer {
+   
+    padding: 2%;
+    background-color: #F2F3F7;
+   
+}
+
+.labs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    height: 500px;
+    scrollbar-width: none;
+}
+.labs::-webkit-scrollbar{
+    display: none;
+}
+
+.labs div{
+    padding-bottom: 20px;
+}
+.labs div h4{
+    margin-top: 0;
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid grey;
+    border-top: none;
+}
+
+.labs div img{
+    height: 35vh;
+}
+
+
+@media (max-width: 800px) {
+  /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+  .inner{
+
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+
+.carousel-item img{
+
+	height: 40vh;
+}
+
+}

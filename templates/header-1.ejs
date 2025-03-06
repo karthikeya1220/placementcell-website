@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="/css/templates-1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="/scripts/templates-1.js"></script>
+<nav class="top-navbar">
+    <div class="top-navbar-container">
+        <div class="top-navbar-brand">
+            <a href="http://www.iiitdm.ac.in">
+                <img class="top-navbar-brand-logo" src="/img/icons/logo1.png" alt="Logo">
+            </a>
+            <a href="/" class="top-navbar-brand-label">
+                Training and Placemaent Cell <br>
+                IIITDM Kancheepuram
+            </a>
+        </div>
+        <div class="top-navbar-item">
+            <a class="top-navbar-item-link" href="/">Home</a>
+            <div class="top-navbar-item-link-dd">
+                <span class="top-navbar-item-link-dd-title">Recruiters</span>
+                <div class="top-navbar-item-link-dd-content">
+                    <div class="top-navbar-item-link-dd-content-spacing">
+                        <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="top-navbar-item-link-dd-content-list">
+                        <!-- <a href="/recruiters"><li>Recruiters</li></a> -->
+                        <a href="/facilities"><li>Facilities</li></a>
+                        <a href="/statistics"><li>Statistics</li></a>
+                        <a href="/demographic"><li>Student Demography</li></a>
+                        <a href="/placementprocedure"><li>Placement Procedure</li></a>
+                    </div>
+                </div>
+            </div>
+            <a class="top-navbar-item-link" href="/erf" target="blank"><abbr title="Employee Registration Form">ERF</abbr></a>
+            <a class="top-navbar-item-link" href="/enquiry" target="blank">Enquiry</a>
+            <div class="top-navbar-item-link-dd">
+                <span class="top-navbar-item-link-dd-title">Why Recruit</span>
+                <div class="top-navbar-item-link-dd-content">
+                    <div class="top-navbar-item-link-dd-content-spacing">
+                        
+                        <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="top-navbar-item-link-dd-content-list">
+                        <a href="/whyRecruit"><li>Why Recruit</li></a>
+                        <a href="/infrastructure"><li>Infrastructure</li></a>
+                        <a href="/achieve"><li>Achievements</li></a>
+                        <!-- <a href="/rnd"><li>R&D</li></a> -->
+                        <a href="/extra"><li>Extra-Curricular</li></a>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <a class="top-navbar-item-link" href="/contactUs">Our team</a>
+            <!-- <a class="top-navbar-item-link" href="/Brochure">Brochure</a> -->
+            <div class="top-navbar-item-link-dd">
+                <span class="top-navbar-item-link-dd-title"><a href="/vid/IIIT Kanchipuram Placement Brochure_Single Page PDF (1).pdf">Brochure</a></span>
+                
+            </div>
+            <!-- <a class="top-navbar-item-link" href="/underconstruction">Student Login</a> -->
+            <!-- <div class="top-navbar-item-link-dd">
+                <span class="top-navbar-item-link-dd-title">Signin/Register</span>
+                <div class="top-navbar-item-link-dd-content top-navbar-custom-dd">
+                    <div class="top-navbar-item-link-dd-content-spacing">
+                        
+                        <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="top-navbar-item-link-dd-content-list">
+                        <a href="/underConstruction"><li>Student Login</li></a>
+                        <a href="/erf"><li>Company Registration Form</li></a>
+                    </div>
+                    
+                </div>
+            </div> -->
+        </div>
+        <button class="top-navbar-menu-btn" id="top-navbar-menu-btn" onclick="open_dd('dd-s-content','top-navbar-menu-btn','top-navbar-menu-btn','90')">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="dd-s-content" id="dd-s-content">
+        <a class="dd-s-content-link" href="/">Home</a>
+        <div class="dd-s-content-link-dd">
+            <span class="dd-s-content-link-dd-title" id="recruiters_title" onclick="open_dd('recruiters_dd','recruiters_title','recruiters_icon','45')">Recruiters
+                <i class="fa fa-plus" id="recruiters_icon" aria-hidden="true"></i>
+            </span>
+            <div class="dd-s-content-link-dd-content" id="recruiters_dd">
+                <!-- <a href="/recruiters"><li>Recruiters</li></a> -->
+                <a href="/facilities">Facilities</a>
+                <a href="/statistics">Statistics</a>
+                <a href="/demographic">Student Demography</a>
+                <a href="/placementprocedure">Placement Procedure</a>
+            </div>
+        </div>
+        <a class="dd-s-content-link" href="/erf" target="blank"><abbr title="Employee Registration Form">ERF</abbr></a>
+        <a class="dd-s-content-link" href="/enquiry" target="blank">Enquiry</a>
+        <div class="dd-s-content-link-dd">
+            <span class="dd-s-content-link-dd-title" id="whyrecruit_title" onclick="open_dd('whyrecruit_dd','whyrecruit_title','whyrecruit_icon','45')">Why Recruit
+                <i class="fa fa-plus" id="whyrecruit_icon" aria-hidden="true"></i>
+            </span>
+            <div class="dd-s-content-link-dd-content" id="whyrecruit_dd">
+                <a href="/whyRecruit">Why Recruit</a>
+                <a href="/infrastructure">Infrastructure</a>
+                <a href="/achieve">Achievements</a>
+                <!-- <a href="/rnd">R&D</a> -->
+                <a href="/extra">Extra-curricular</a>
+            </div>
+        </div>
+        <a class="dd-s-content-link" href="/contactUs">Our Team</a>
+        <!-- <a class="dd-s-content-link" href="/Brochure">Brochure</a> -->
+        <div class="dd-s-content-link-dd">
+            <span class="dd-s-content-link-dd-title" id="brochure_title" onclick="open_dd('brochure_dd','brochure_title','brochure_icon','45')">Brochure
+                <i class="fa fa-plus" id="brochure_icon" aria-hidden="true"></i>
+            </span>
+            <div class="dd-s-content-link-dd-content" id="brochure_dd">
+                <a href="https://drive.google.com/file/d/19EakTYaxRFOov9CHDn5vdY5zrLWbIoDT/view?usp=sharing" target="blank">PG 2019-20</a>
+                <a href="https://www.iiitdm.ac.in/placement/resources/BROCHURE21919_2019_09_21_printed.pdf" target="blank">UG 2019-20</a>
+                <!-- <a href="/companylogin"><li>Conpany Login</li></a> -->
+            </div>
+        </div>
+        <!-- <a class="dd-s-content-link" href="/underconstruction">Student Login</a> -->
+        <!-- <div class="dd-s-content-link-dd">
+            <span class="dd-s-content-link-dd-title" id="signin_title" onclick="open_dd('signin_dd','signin_title','signin_icon','45')">Signin/Register
+                <i class="fa fa-plus" id="signin_icon" aria-hidden="true"></i>
+            </span>
+            <div class="dd-s-content-link-dd-content" id="signin_dd">
+                <a href="/underConstruction">Student Login</a>
+                <a href="/erf">Company Registration Form</a>
+            </div>
+        </div> -->
+    </div>
+</nav>
+<div class="in-spacing" id="in-spacing"></div>

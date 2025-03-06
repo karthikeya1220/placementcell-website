@@ -1,0 +1,228 @@
+/* Import inter font from google fonts */
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700");
+body {
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(231, 231, 231);
+  font-family: "Inter", sans-serif;
+}
+.section-box {
+  position: relative; /* Ensure the circle is positioned relative to the box */
+}
+
+.circle {
+  width: 100px; /* Diameter of the circle */
+  height: 100px; /* Diameter of the circle */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with 0.5 opacity */
+  border-radius: 50%; /* Makes the div circular */
+  position: absolute;
+
+}
+
+.topImage {
+  font-size: 1rem;
+  /* height: 50vh; */
+  /* background-image: url("/img/facilities/bg1.jpg"); */
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+.topImageTitle {
+  font-family: "Inter", sans-serif;
+  text-align: start;
+  margin-left: 40px !important;
+  font-weight: 500;
+  /* Underline */
+  /*text-decoration: underline;*/
+  width: 100%;
+  color: white;
+  /* text-shadow: 0 0 20px black; */
+  /* background-color: #00264d; */
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  color: black;
+}
+.custom-container-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+/*.custom-container {
+  /* background-image: url("/img/facilities/bg2.jpg");
+    background-position: center;
+    background-attachment: fixed; 
+}
+.custom-container-section:nth-child(odd) {
+  /* background-color: lightgrey; 
+}*/
+.section-description {
+  padding-right: 4vw;
+  padding-left: 4vw;
+  font-size: 1.5rem;
+}
+.grid-child purple {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  margin-top: 100px;
+
+}
+
+.prog {
+  /* Display vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Flex gap between rows */
+  row-gap: 20px;
+  padding: 30px;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #fff !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  color: black !important;
+  border-color: #fff !important;
+}
+#btn-1,
+#btn-2,
+#btn-3,
+#btn-4,
+#btn-5 {
+  border-radius: 10px;
+  width: 98%;
+  height: 65px;
+  padding-left:5%;
+}
+
+.grid-child green {
+   margin-top: 40px;
+    margin-left: 95px; 
+  padding-right: 4rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap:0.1rem;
+  /* align-items: center; */
+  justify-content: center;
+}
+#btn-1:hover,
+#btn-2:hover,
+#btn-3:hover,
+#btn-4:hover,
+#btn-5:hover {
+  background-color: #e7e7e7 !important;
+}
+
+.active {
+  /* gray */
+  background-color: #e7e7e7 !important;
+}
+.section-box {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content:flex-start;
+  align-items:center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  /* width: 75%; */
+  /*border-radius: 10px;*/
+  color:black;
+  text-align:left;
+}
+/* .section-box:nth-child(odd){
+    background-color: white;
+}
+.section-box:nth-child(even){
+    background-color: grey;
+} */
+.section-box-item {
+  padding: 2rem;
+}
+.section-custom-para {
+  width: auto;
+  padding-left:2px;
+}
+.section-custom-para1 {
+  width: auto;
+  padding-left:4.375rem;
+  padding-right:1px;
+}
+.section-custom-para2 {
+  width: auto;
+  padding-left:4.375rem;
+  padding-right:1px;
+}
+.section-custom-img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-custom-para2,.section-custom-para1 {
+    padding-left:2rem;
+  }
+  .section-description{
+    padding-left: 0;
+  }
+  html
+  {
+    font-size: 10px;
+  }
+  .custom-container-section {
+    padding: 0 0;
+    margin-left: 10vw;
+  }
+  h2{
+    font-size: 1.5rem !important;
+  }
+  
+  #btn-1,
+  #btn-2,
+  #btn-3,
+  #btn-4,
+  #btn-5 {
+    width: auto;
+    height: auto;
+  }
+  .section-box{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+  .topImage {
+    min-height: unset;
+    font-size: 3.5rem;
+  }
+  .section-custom-img {
+    width: 25rem;
+    height: 20rem;
+    /* padding-top: 0; */
+  }
+  #box-2,#box-4 img{
+    padding-top: 0;
+  }
+  .section-custom-para {
+    padding-left:2rem;
+  }
+  .section-custom-para h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,139 @@
+body{
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+li{
+    /* text-align: justify; */
+    text-justify: inter-word;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem 2rem 0.3rem 0.8rem;
+    /*margin-left: 70px;*/
+    /* color: #000000; */
+    
+}
+.block{
+  padding-left: 30px;
+  padding-right: 30px;
+   padding-top: 4vh;
+  padding-bottom: 2vw;
+  /* box-shadow: 10px 20px 20px black; */
+  /*box-shadow: 0 5px 5px #ccc;*/
+  /*margin-top: 4vh;
+  margin-bottom: 10vh; */
+}
+
+
+h2{
+    /* background-color: rgb(72, 135, 252); */
+    /*background-image: linear-gradient(to right,var(--custom-dark),var(--custom-light));*/
+    /* font-size: 2rem; */
+    font-family: 'Inter', sans-serif;
+    /*text-decoration: underline;*/
+    padding: 4vh 6vh 0 5vh;
+    /* margin-right: 40vw;
+    margin-top: 0; */
+
+     /* border-radius: 10px 10px 0 0; */
+    color: rgb(0, 0,0);
+}
+
+
+.block h3{
+  /* background-image: linear-gradient(to right,var(--custom-dark),var(--custom-light)); */
+  /* font-size: 1.5rem; */
+  font-family: 'Inter', sans-serif;
+  /* padding-left: 70px;
+  box-shadow: 0 -5px 5px #ccc; */
+
+  color: rgb(0, 0,0);
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+.block h4{
+  /* background-image: linear-gradient(to right,var(--custom-dark),var(--custom-light)); */
+  font-family: 'Inter', sans-serif;
+  padding-top: 16px;
+  padding-bottom: 0;
+  padding-right: 10px;
+  border-top: unset;
+  border-bottom: unset;
+    border-radius: 10px;
+  color: rgb(0, 0,0);
+  padding-left: 50px;
+   /* font-size: 1.4rem; */
+   margin: 0;
+
+
+}
+.block > ul{
+    /* background-image: linear-gradient(to right,var(--custom-dark),var(--custom-light)); */
+     /* border: 5px 10px 10px;  */
+    border-top: unset;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 0 5px 5px #ccc;
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    
+    
+}
+
+.cateria li
+{
+   padding: 0px;
+   text-justify: inter-word;
+   font-size: 1.2rem;
+   font-family: 'Inter', sans-serif;
+   transform: translateX(-2rem);
+}
+
+.cateria p
+{
+  padding-left: 10rem;
+  margin: 0px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  
+}
+
+.cateria
+{
+  margin: 2rem;
+}
+
+.sub-next
+{
+  padding: 0.1rem 2rem 0.3rem 0.8rem;
+}
+
+@media screen and (max-width:768px){
+    .block{
+      padding-left: 20px;
+      padding-right: 20px;
+		min-width: unset;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:576px){
+  .block{
+    padding-left: 10px;
+    padding-right: 10px;
+  min-width: unset;
+  width: 100%;
+}
+.cateria
+{
+  margin: 0rem;
+}
+.cateria p
+{
+  padding-left: 5rem;
+}
+}

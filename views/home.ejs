@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/schedule_and_faq.css">
+    <title>Home</title>
+    <link rel="icon" href="img/icons/logo.png" type="image/icon">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/recruiters.css">
+
+    <style>
+        .director-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        .dir_msg {
+            flex: 2; /* Add some padding for spacing */
+        }
+        .img_container {
+            flex: 1;
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: flex-end; /* Justify content to the right */
+
+        }
+        .img_container img {
+            width: 80%; /* Set the width to 90% */
+            height: auto; /* Let the height adjust proportionally */
+            max-height: 80%; /* Limit height to 90% */
+            object-fit: contain;
+            margin-right: 5%; /* Margin for horizontal centering */
+        }
+
+        #read-more-button {
+            background-color: transparent; /* Remove background color */
+            color: blue; /* Change text color */
+            border: none;
+            padding: 5px; /* Adjust padding */
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold; /* Make text bold */
+            text-decoration: underline; /* Add underline */
+        }
+
+        .about-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        .about_iiitdm {
+            flex: 2;
+            padding-right: 20px; /* Add some padding for spacing */
+        }
+        .contents {
+            color: black;
+            font-weight: 400;
+            font-family: Inter;
+            font-style: normal;
+            font-size: 1.1rem;
+            overflow: hidden;
+        }
+        #full-about {
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        #read-button {
+            background-color: transparent;
+            color: blue;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .director-wrapper {
+                flex-direction: column; /* Stack items vertically */
+            }
+            .dir_msg {
+                order: 2; /* Change order for content section */
+                padding: 0; /* Remove right padding */
+            }
+            .img_container {
+                order: 1; /* Change order for image */
+                text-align: center; /* Center align for image */
+                align-items: center; /* Center vertically */
+            }
+            .img_container img {
+                width: 70%; /* Adjust image width for phone view */
+                max-height: none; /* Reset max-height for phone view */
+                object-fit: contain;
+                margin-right: 15%; /* Remove margin for image */
+                margin-bottom: 10px; /* Add margin at bottom for spacing */
+            }
+        }
+
+    </style>
+</head>
+
+
+<body style="width:100vw;">
+    <%- include('templates/header-1.ejs') -%>
+        <div class="inst_img">
+  
+            <!-- <div class="text-animation-container" style="background-color: #34323286;position: absolute; margin-top: 0;">
+                <div class="text-animation">
+                    <a href="https://calendar.google.com/calendar/embed?src=c_6702c549a206e7e63136e56311c7c0c297340c94556ecf3298ca3be3a3da9373%40group.calendar.google.com&ctz=Asia%2FKolkata" style="color: white;">Click here to view the Placement Calendar for 2023 to 2024</a>
+                </div>
+            </div> -->
+            <img src="../img/IMG_20220508_170010_587 - ME21B2001 KATRAVATH PAVAN.jpg" alt="">
+        </div>
+    <!-- <div class="container-fluid" id="home";"> -->
+
+    <div class="about-wrapper">
+        <section class="about_iiitdm">
+            <div class="about_container">
+                <div style="color: black">
+                    <h6><u style="font-weight: 350;
+                        font-family: Inter;
+                        font-style: normal;font-size: 1.9rem;">About us  </u></h6>
+                        <!-- font-style: normal;font-size: 1.9rem;">About us Indian Institute of Information Technology Design and Manufacturing Kancheepuram </u></h6> -->
+                </div>
+                <br>
+                <div class="contents" id="short-about">
+                    <p>
+                        We are the Indian Institute of Information Technology Design and Manufacturing Kancheepuram (
+                            <a href="http://www.iiitdm.ac.in" target="blank">IIITDM</a> Kancheepuram), established in 2007 by the Ministry of Education, Government of India. Our mission is to promote the competitive advantage of Indian products in global markets. We focus on Product Lifecycle Management (PLM), encompassing design and manufacturing with state-of-the-art concepts, tools, processes, and industry best practices.
+                       </p>
+                </div>
+                <div class="contents" id="full-about">
+                    <p>
+                        We are the Indian Institute of Information Technology Design and Manufacturing Kancheepuram (<a href="http://www.iiitdm.ac.in" target="blank">IIITDM</a> Kancheepuram), established in 2007 by the Ministry of Education, Government of India. Our mission is to promote the competitive advantage of Indian products in global markets. We focus on Product Lifecycle Management (PLM), encompassing design and manufacturing with state-of-the-art concepts, tools, processes, and industry best practices.
+                        <br/><br/>
+                        Our institution offers academic and research programs that integrate engineering design, manufacturing, and management with information technology. Located on a 51-acre campus near Chennai, our fully residential campus houses all students and key facilities, including academic and administrative blocks, lecture halls, and laboratories.
+                    </p>
+                </div>
+                <button id="read-button" onclick="toggleReadMore2()">Read More</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleReadMore2() {
+            var shortAboutDiv = document.getElementById("short-about");
+            var fullAboutDiv = document.getElementById("full-about");
+            var button = document.getElementById("read-button");
+
+            if (shortAboutDiv.style.display === "none") {
+                shortAboutDiv.style.display = "block";
+                fullAboutDiv.style.display = "none";
+                button.innerHTML = "Read More";
+            } else {
+                shortAboutDiv.style.display = "none";
+                fullAboutDiv.style.display = "block";
+                button.innerHTML = "Read Less";
+            }
+        }
+    </script>
+        <div class="director-wrapper">
+            <section class="dir_msg">
+                <div class="dir_container">
+                    <div style="color: black">
+                        <h6><u style="font-weight: 350;
+                            font-family: Inter;
+                            font-style: normal;font-size: 1.9rem;">Director's Message</u></h6>
+                    </div>
+                    <br>
+                    <div class="contents dcc" id="short-msg" style="color: black; font-weight: 400;
+                        font-family: Inter;
+                        font-style: normal; font-size: 1.1rem; overflow: hidden;">
+                        <p>
+                            I extend my warm greetings on behalf of IIITDM Kancheepuram. IIITDM
+Kancheepuram is an Institute of National Importance established by the Ministry of Education with a vision to develop a premier Institute of Excellence in IT, Design, and Manufacturing.
+IIITDM Kancheepuram aims to create an academic environment that fosters innovation,
+entrepreneurship, and research excellence, with a strong industry-academia interface. We
+follow a robust "learning by doing" practice under which the Institute strives to provide its
+students with state-of-the-art facilities, industry exposure, and hands-on experience in
+cutting-edge technologies, preparing them to become leaders in their chosen fields.
+</p> </p>
+                    </div>
+                    <div class="contents dcc" id="full-msg" style="color: black; font-weight: 400;
+                        font-family: Inter;
+                        font-style: normal; font-size: 1.1rem; display: none;">
+                        <p>
+                            
+IIITDM Kancheepuram offers various UG, PG, and Ph.D. programs, such as B.Tech in
+CSE, ECE, ME, and SM, and M.Tech in CSE, ECE, ME, and SM, and M.Des. in Integrated
+Product Design. Additionally, IIITDM Kancheepuram offers various workshops, frequent
+conferences, and industry interactions for professionals and working individuals in
+different fields not only allowing them to exchange ideas but also stimulating research.
+IITDM Kancheepuram has signed several MoUs with various organizations and Institutes
+to facilitate collaborative research, student exchange programs, and other activities. The
+strong faculty base that graduated from top technical institutes engages and guides the
+students in R&D activities to make them innovative and future thinkers. Many of our
+faculty are experienced practitioners who have a penchant for interactive classroom
+sessions, ensuring that the content is on par with prevalent industry demands. Overall,
+<br/>
+<br/>
+
+the students are groomed in a conducive environment and I am sure they are industry-
+ready and productive from day one. I wish the upcoming placement program a great
+<br/>
+<br/>
+success and look forward to establishing relationships with new recruiters while also
+strengthening the current partnerships. I welcome you once again to realize your
+experience with IIITDM Kancheepuram.  </p>
+                    </div>
+                    <button id="read-more-button" onclick="toggleReadMore()">Read More</button>
+                    <br>
+                    <h6 style="text-align: right; font-weight: 750;">-<a href="https://www.mvkartikeyan.com/" target="blank">Prof. M V Kartikeyan</a></h6>
+                </div>
+            </section>
+            <div class="img_container">
+                <img src="https://www.iiitdm.ac.in/_app/immutable/assets/ProfMVKartikeyan.c6267877.webp" alt="">
+            </div>
+        </div>
+        <script>
+            function toggleReadMore() {
+                var shortMsgDiv = document.getElementById("short-msg");
+                var fullMsgDiv = document.getElementById("full-msg");
+                var button = document.getElementById("read-more-button");
+    
+                if (shortMsgDiv.style.display === "none") {
+                    shortMsgDiv.style.display = "block";
+                    fullMsgDiv.style.display = "none";
+                    button.innerHTML = "Read More";
+                } else {
+                    shortMsgDiv.style.display = "none";
+                    fullMsgDiv.style.display = "block";
+                    button.innerHTML = "Read Less";
+                }
+            }
+        </script>
+    
+
+
+        <!-- Statictics and notifications -->
+        <div class="" id="sandn">
+            <div class="row" style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px;">
+                <div class="col-11 col-md-3" style="margin-top: 40px; margin-bottom: 20px; background: linear-gradient(180deg,
+            rgba(8, 0, 56, 0.4) 0%,
+            rgba(131, 131, 131, 0.08) 100%);
+            color: white; border-radius: 4vh;">
+                    <div class="stats_external">
+                        <div class="statictics_head" style="margin-top: 0; text-align: center;"><a
+                                href="/statistics">Statistics</a></div>
+                        <div class="main_statictics_body">
+                            <div class="main_statictics_body_numbers">
+                                <!-- <p><bold style="font-size:2.5rem;">42</bold> LPA</p> -->
+                                <h1 style="margin-bottom: 0;">32LPA</h1>
+                                <p style="margin-top: 0;">Highest Package</p>
+                            </div>
+                            <div class="main_statictics_body_numbers">
+                                <h1 style="margin-bottom: 0;">120+</h1>
+                                <p style="margin-top: 0;">Total Offers</p>
+                            </div>
+                            <div class="main_statictics_body_numbers">
+                                <h1 style="margin-bottom: 0;">100+</h1>
+                                <p style="margin-top: 0;">Companies visited</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-8" style="margin-left: 0;">
+                    <div class="home_notification_body" style="margin-left: 0; background: linear-gradient(180deg,
+                    rgba(8, 0, 56, 0.4) 0%,
+                    rgba(131, 131, 131, 0.08) 100%);  border-radius: 4vh;">
+                        <div class="noticification_head">Notification</div>
+                        <div class="home_notification_body_content">
+                            <div class="home_notification_content">Highest Package of 32 LPA has been offered to 4 students by VISA Inc.</div>
+                            <div class="home_notification_content">Amazon has offered the highest internship stipend to one student with 1.1 Lac/month</div>
+                            <div class="home_notification_content">Accenture has offered a package of 12.2 LPA to eight students</div>
+                            <div class="home_notification_content">Plum Benefits has offered a package of 16 LPA to three students</div>
+                            <div class="home_notification_content">Global Foundries has offered a package of 15 LPA to one student</div>
+                            <div class="home_notification_content">Forsys has offered a package of 12 LPA to 3 students</div>
+                            <div class="home_notification_content">AMD has offered an internship to 4 students with a stipend of 45K/month</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Recruitors part -->
+        <!-- <section id="Recruitors">
+         <div class="wrapper">
+            <div class="about_head">
+                Our Past Recruitors
+            </div>
+            <div class="gallery" style="margin-top: 80px;">
+                <div class="gallery_item gallery_item--1">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/21.png"  alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--2">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/22.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--3">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/23.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--4">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/24.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--5">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/25.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--6">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/26.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--7">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/27.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--8">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/28.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--9">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/29.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--10">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/30.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--11">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/31.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item gallery_item--12">
+                    <a href="#" class="gallery_link">
+                        <img src="https://www.iiitdm.ac.in/img/placements/company/32.png" alt="" class="mx-auto d-block">
+                        <div class="gallery_overlay">
+                            <span>COMPANY</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </section> -->
+
+        <!-- <div class="recruiters-wrapper">
+        <section class="recruiters_logo">
+            <div class="logo_container" style="margin-left: 250px;">
+                <div style="color: black;">
+                    <h6><u style="font-weight: 300;
+                        font-family:Inter;
+                        font-style: normal;font-size:1.68rem;">Few of our Past Recruiters</u></h6>
+                </div>
+                <img src="img/recruiters.png" alt="Past Recruiters">
+            </div>
+        </section>
+    </div>-->
+        <div class="recruiters-wrapper" style="text-align: center; ">
+            <h6><u style="font-weight: 350;
+            font-family:Inter;
+            font-style: normal;font-size: 1.9rem;">Few of our Past Recruiters</u></h6>
+            <img src="img/recruiters.png">
+        </div>
+
+
+        <%- include('templates/footer-1.ejs') -%>
+</body>
+<!-- <script src="/scripts/home.js"></script> -->
+
+<script>
+    function MediaQuery(x) {
+        if (x.matches) {
+            document.getElementsByClassName('my-row')[0].classList.remove('my-row');
+            console.log("Media query js working");
+        }
+    }
+    var x = window.matchMedia("(max-width: 768px)");
+    MediaQuery(x);
+    // x.addEventListener(MediaQuery);
+</script>
+
+</html>

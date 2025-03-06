@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/erf.css">
+    <title>Enquiry</title>
+    <style>
+    </style>
+</head>
+<body>
+    <%- include('templates/header-1.ejs') -%>
+    <div class="container p-4">
+        <!-- <div class="container p-4">
+            <a href="#erf"><button type="button"  class="btn btn-dark">ERF</button></a>
+            <a href="#enquiry"><button type="button" class="btn btn-dark">Enquiry</button></a>
+        </div> -->
+        <div class="jumbotron jumbotron-fluid" id="erf">
+        <!-- <div class="jumbotron jumbotron-fluid bg-cover" id="erf" style="padding: 2rem; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(https://placeimg.com/1000/480/nature)"> -->
+            <div class="container">
+                <h1 class="display-4"><b>Enquiry Form</b></h1>
+                <p class="lead"><b>IIITDM Kancheepuram</b></p>
+            </div>
+            <hr>
+            <div class="container">
+                <form action="/erf" method="POST">
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Name</label> -->
+                        <input type="text" class="form-control" placeholder="Your Name" name="companyName" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <input type="email" class="form-control" placeholder="Your Email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="inputPassword4">Contact Number</label> -->
+                        <input class="form-control" placeholder="Your Contact" type="number" name="mobileNumber" id="inputPassword4" >
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Subject</label> -->
+                        <input class="form-control" placeholder="Subject" type="text" name="jobDesignationOffered" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Your Query</label> -->
+                        <textarea type="text" class="form-control" placeholder="Message" id="exampleInputEmail1" aria-describedby="emailHelp"></textarea>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group" align=center>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('templates/footer-1.ejs') -%>
+</body>
+</html>

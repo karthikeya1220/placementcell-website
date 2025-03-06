@@ -1,0 +1,105 @@
+/* Google fonts Inter regular 400 */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  background-color: #eee;
+  text-align: center;
+  overflow-x: hidden;
+  --var--font-weight: 400;
+  --var--font-family: "Inter";
+  --var--font-style: "normal";
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  font-family: "Inter", sans-serif !important;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 20px;
+  border: none;
+
+  gap: 20px; /* Adjust the gap between cards as needed */
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #178145;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-content {
+  padding: 16px;
+  background-color: #acf9cdb6;
+  color: white;
+  border-radius: 0 0 20px 20px ;
+
+}
+
+.card h3 {
+  color: black;
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 0;
+}
+
+.card p {
+  
+  color: black;
+  font-size: 14px;
+}
+
+.carousel-inner img {
+  width: 100%;
+}
+.carousel .carousel-item {
+  height: 80vh;
+}
+
+.item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+#mycarousel-indicators > li {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+}
+
+
+.heading-bg {
+  /* background-color: #00264d; */
+  padding: 0.5%;
+  color: white;
+}
+.heading-bg > h1 {
+  text-align: center;
+  font-size: 2rem;
+  /* font-family: rubik; */
+  font-weight: bold;
+}
+@media only screen and (min-width: 150px) and (max-width: 500px) {
+  .jumplink {
+    text-align: center;
+    margin: 5%;
+  }
+  #s_achievments .text-center div {
+    font-size: 30px;
+  }
+  .carousel .carousel-item {
+    height: 20vh; 
+  }
+}

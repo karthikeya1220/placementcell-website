@@ -1,0 +1,437 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: "Inter", sans-serif;
+}
+
+/* About section */
+
+div.inst_img img{
+  width:100%;
+  height: 600px;
+  object-fit: cover;
+  
+}
+
+#home {
+  /* background: url(../img/20220411_06216\ -\ EC21B1029\ THOTA\ NAGA\ VENKATA\ SAKET\ RAM.jpg) center; */
+  background: url(../img/IMG_20220508_170010_587\ -\ ME21B2001\ KATRAVATH\ PAVAN.jpg) center;
+  background-size: cover;
+  position: absolute;
+}
+
+#home::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.about_info {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  /* margin-right: 0; */
+  background: linear-gradient(
+    180deg,
+    rgba(8, 0, 56, 0.4) 0%,
+    rgba(89,92,73, 0.525) 100%
+  );
+  border-radius: 4vh;
+}
+
+/* 
+.about_imgContainer{
+    margin: 20px;
+}
+
+.about_img{
+    width: 100%;
+    border-radius: .5rem;
+    margin-top: 50px;
+} */
+
+.about_head {
+  /* text-align: center; */
+  font-size: 1.9rem;
+  /* margin-left: 25px; */
+  font-weight: 400;
+  /*text-decoration: underline;*/
+  color: white;
+}
+
+.main_about_body {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  /* margin-left: 25px; */
+  color: white;
+  padding: 10px 0;
+  text-align: justify;
+  font-weight: 400;
+  font-family: "Inter";
+  font-style: "normal";
+}
+
+/* Director Part */
+/* .Director_img
+{
+    width: 85%;
+    border-radius: .5rem;
+    margin-top: 50px;
+}
+
+.Director_imgContainer{
+    margin: 30px;
+    margin-top: 0;
+} */
+
+/* about section styling */
+
+.about-wrapper {
+  margin: 20px;
+  box-shadow: -1px -2px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.about_iiitdm {
+  width: 100%;
+  height: fit-content;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 10px;
+}
+.about_container {
+  padding: 20px;
+  padding-bottom: 25px;
+  border-color: #000000;
+}
+
+.director-wrapper {
+  margin:   20px;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.dir_msg {
+  width: 100%;
+  height: fit-content;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 10px;
+}
+.dir_container {
+  padding: 20px;
+  padding-bottom: 30px;
+  border-color: #000000;
+}
+.img_container img {
+  max-width: 440px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.img_container {
+  text-align: center;
+}
+
+/* Statictics and Notifications */
+
+#sandn {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/20220411_062116\ -\ EC21B1029\ THOTA\ NAGA\ VENKATA\ SAKET\ RAM.jpg) no-repeat center;
+  background-size: cover;
+  opacity: 1.5;
+}
+.statictics_head a:link,
+.statictics_head a:visited {
+  color: white;
+}
+.statictics_head a:active {
+  color: var(--custom-light);
+}
+
+.statictics_head,
+.noticification_head {
+  font-size: 1.9rem;
+  font-weight: 400;
+  /*text-decoration: underline;*/
+  margin-left: 10px;
+}
+
+.noticification_head {
+  margin-top: 40px;
+  margin-left: 25px;
+}
+
+.statictics_head {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.main_statictics_body {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 3em 0;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home_notification_body_content::-webkit-scrollbar {
+  /* width: 10px; */
+  display: none;
+}
+
+.home_notification_content {
+  /* border: 2px solid black; */
+  line-height: 1.8rem;
+  padding: 1rem;
+  /* background: var(--custom-light); */
+  margin: 7px;
+}
+
+.home_notification_body {
+  color: white;
+  height: 30rem;
+  font-size: 1.2rem;
+  line-height: 2.5em;
+  /* margin: 1rem;
+    padding: 2rem; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  /* background-color: var(--custom-dark); */
+}
+
+.home_notification_body_content {
+  scrollbar-width: none;
+  overflow-y: scroll;
+  height: 24rem;
+}
+.my-row {
+  margin: 0;
+  width: 50%;
+  float: right;
+}
+.stats_external {
+  height: 14rem;
+  margin: 0%;
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .dir_msg {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img_container img {
+    max-width: 90%;
+  }
+  .stats_external {
+    height: auto;
+    margin: auto;
+  }
+  .main_statictics_body {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  .logo_container {
+    margin-left: 0 !important;
+    width: 100% !important ;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  /* .main_statictics_body {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  } */
+}
+/* Recruitors Part */
+/* .wrapper{
+    max-width: 75rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 12.5rem);
+    gap: 0.5rem;
+}
+.gallery_link{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.gallery_link:hover .gallery_overlay{
+    opacity: 1;
+}
+.gallery_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.gallery_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+.gallery_overlay span{
+    position: relative;
+    line-height: 3rem;
+}
+
+.gallery_overlay span:before,
+.gallery_overlay span:after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease-out 0.2s;
+}
+.gallery_overlay span:before{
+    top: 0;
+    left: 0;
+}
+.gallery_overlay span:after{
+    bottom: 0;
+    right: 0;
+}
+.gallery_link:hover .gallery_overlay span:before,
+.gallery_link:hover .gallery_overlay span:after{
+    width: 100%;
+}
+.gallery_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: 
+        transform 0.5s;
+        filter: 0.5s;
+}
+gallery_link:hover .gallery_image{
+    transform: scale(1.2);
+    filter: blur(2px);
+}
+
+
+/* Media queries 
+
+@media only screen and (min-width : 150px) and (max-width : 320px) {
+    .about_head{
+        font-size: 25px;
+    }
+    .main_about_body{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 60rem) {
+    .wrapper{
+        padding: 1rem;
+    }
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    .gallery_overlay{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 35rem) {
+    .gallery{
+        display: block;
+    } 
+    .gallery_item{
+        margin: 0.5rem;
+    }
+    .gallery_link{
+        height: 80vw;
+    }
+    .gallery_overlay{
+        font-size: 1rem;
+    }
+} */
+/* 
+#Recruitors{
+    background: url(../img/macc-logo-collage.png) no-repeat center;
+    background-size:cover;
+    height: 1000px;
+} */
+
+/* /Recruiters/ */
+.recruiters-wrapper {
+  margin: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.recruiters_logo {
+  width: 100%;
+  height: fit-content;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 10px;
+}
+.logo_container {
+  width: 50%;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-color: #000000;
+}
+.logo_img_container {
+  display: grid;
+  place-items: center;
+}

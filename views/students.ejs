@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="/css/students.css">
+    <style>
+        /* Add your CSS styles for the tabs here */
+        .tab-button {
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    border-radius: 5px;
+    position: relative; /* Add this to make the ::after pseudo-element positioned relative to the button */
+}
+
+.tab-button::after {
+    content: "\f107"; /* Unicode for the down arrow icon (you can replace this with your preferred arrow icon) */
+    font-family: FontAwesome; /* Use a font icon library like FontAwesome or replace with an arrow image */
+    margin-left: 5px; /* Add some space between the button text and arrow */
+    transition: transform 0.3s; /* Add a smooth transition for the arrow rotation */
+}
+
+.tab-button.active::after {
+  content: "\f106"; 
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees when the button is active */
+}
+
+        .tab-content {
+            display: flex;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('templates/header-1.ejs') -%>
+
+    <div class="block">
+        <!-- Create tab buttons -->
+        <div class="tab-button" onclick="showTab('eligibility')">Eligibility Criteria</div>
+        
+        <!-- Create tab content for each section -->
+        <div class="tab-content" style="display: none;" id="eligibility">
+            <!-- Content for Eligibility Criteria section -->
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li>
+                  All students who expect to graduate from the institute by the end of the academic year 2023 - 2024
+                  and are seeking employment.
+                </li>
+                <li>
+                  Students having 3 or more course backlogs on completion of semester 6/8/2 for BTech, Dual
+                  Degree, MTech and respectively are not eligible to register for placement. In case a student clears
+                  excess backlogs in the 7 / 9 / 3 semester, he will be permitted to register for Placements.
+                </li>
+                <li>
+                  Each student should register online in the forum mandated by Placement Cell like Superset, Google
+          Forms, etc. by uploading the filled resume in the prescribed format along with the registration fees.
+                </li>
+                <li>
+                  Students who have lost their job for genuine reasons will be allowed to re-register on a case-to-case basis. Only students who have a course extension or other genuine reasons will be allowed to re-register 
+                </li>
+              </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('responsibility')">Student Responsibility</div>
+
+        <div class="tab-content" style="display: none;" id="responsibility">
+            <!-- Content for Student Responsibility section -->
+            <h2>Student Responsibility</h2>
+            <ul>
+                <li>
+                    Information regarding company visits will be provided through email/ notice board/ website/Superset/ Telegram group (henceforth referred to as communication channels). Students are advised to check timely announcements, go through the company website, and apply only if interested.
+                  </li>
+                  <li>
+                    Students are expected to follow the institute resume template available on the placement website for preparing resumes.
+                  </li>
+                  <li>
+                    The resume's details must be genuine, and any student found violating this will not be permitted to apply for placements for the rest of the academic year.
+                  </li>
+                  <li>
+                    Depending on the profile/requirements laid by the respective company a detailed resume should be prepared and submitted within the deadline. Late submissions will not be considered for the test/interview.
+                  </li>
+                  <li>
+                    It is the responsibility of the student to check announcements/notices/updated information/ shortlisted names etc.in the notice boards/ email/ website/ communication channels. Students are expected to report at the respective venue as per the announcements. 
+                  </li>
+    </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('interaction')">Pre-Placement Interaction</div>
+
+        <div class="tab-content" style="display: none;" id="interaction">
+            <!-- Content for Pre-Placement Interaction section -->
+            <h2>Pre-Placement Interaction</h2>
+            <ul>
+                <li>
+                    Those who submitted the resume and attended the PPI session are eligible to appear in that company's selection process. PPI attendance is compulsory.
+                  </li>
+                  <li>
+                    Students must clarify their queries regarding salary break-up, job profile, place of work, bond details, medical fitness requirements, etc. with the company officials during PPI.
+                  </li>
+                  <li>
+                    There shall be no question about the pay package offered by the company. Students shall not question the policy of the company.
+                  </li>
+                  <li>
+                    The interaction with the representatives of the companies should be dignified.
+                  </li>    
+            </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('attendance')">Attendance and Punctuality</div>
+
+        <div class="tab-content" style="display: none;" id="attendance">
+            <!-- Content for Attendance and Punctuality section -->
+            <h2>Attendance and Punctuality</h2>
+            <ul>
+                <li>
+                    Latecomers for the Aptitude Test / Group Discussion / Interview may not be allowed to appear for the selection process.
+                  </li>
+                  <li>
+                    A student who applies and gets shortlisted is bound to go through the entire selection process unless rejected midway by the recruiter.
+                  </li>
+                  <li>
+                    Any student who withdraws deliberately during a selection process will be disqualified from placement for the rest of the academic year.
+                  </li>
+                  <li>
+                    Unauthorized absence for the test/interview will lead to cancellation of registration.
+                  </li>    
+            </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('dresscode')">Dress Code</div>
+
+        <div class="tab-content" style="display: none;" id="dresscode">
+            <!-- Content for Dress Code section -->
+            <h2>Dress Code</h2>
+            <ul>
+                <li>
+                    Students must be formally dressed whenever they participate in any sort of interaction with a company. The coordinator reserves the right to refuse permission to a student to attend the selection process if their attire is unsatisfactory. The dress code shall be applicable for Pre-placement talks as well.
+                  </li>
+                  <li>
+                    Boys - Formal dark pants with a light-colored full-sleeve shirt with necktie and formal shoes.
+                  </li>
+                  <li>
+                    Girls - Churidar / Salwar / Shirt-Pant with overcoat and formal shoes.
+                  </li>
+                  <li>
+                    Students must bring their identity cards whenever they undergo a placement process.
+                  </li>    
+            </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('joboffers')">Job Offers</div>
+        
+        <div class="tab-content" style="display: none;" id="joboffers">
+            <!-- Content for Job Offers section -->
+            <h2>Job Offers</h2>
+            <ul>
+                <li>
+                    Announcement on the notice board/email/website will be considered as the final offer. Offers received from companies must be collected as per the timings in the circular /notice.
+                  </li>
+                  <li>
+                    The students should not question the company about why he/she is not selected. Selection is in the hands of the company. Any unruly behavior compromising the institute's reputation shall deem the student ineligible for future internship procedures and the student shall face the disciplinary committee.
+                  </li>
+                  <li>
+                    The responsibility of going through the offer letter and taking actions therein such as submission of documents lies entirely with the student.
+                  </li>
+                  <li>
+                    The students should honor the offer and communicate with the industry in a pleasing manner.
+                  </li>
+                  <li>
+                    In case offers are received directly by the student from the company, the same must be intimated to the placement office.
+                  </li>
+                 </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('multipleoffers')">Multiple Job Offers</div>
+    
+        <div class="tab-content" style="display: none;" id="multipleoffers">
+            <!-- Content for Multiple Job Offers section -->
+            <h2>Multiple Job Offers</h2>
+            <li>
+                A student is eligible for the second job only if ALL the
+                mentioned criteria are met
+                <ol style="list-style-type: none;" class="cateria">
+                  <li>1. The second CTC must be at least 1.5 times more than the first one.</li>
+                  <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                    <thead>
+                      <tr style="background-color: #f2f2f2;">
+                        <th style="border: 1px solid #ddd; padding: 12px;"></th>
+                        <th style="border: 1px solid #ddd; padding: 12px;">1st Offer</th>
+                        <th style="border: 1px solid #ddd; padding: 12px;">Eligibility for the 2nd Offer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px;">Student 1</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">6 LPA</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">>9 LPA</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px;">Student 2</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">7.5 LPA</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">>11.25 LPA</td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 12px;">Student 3</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">10 LPA</td>
+                        <td style="border: 1px solid #ddd; padding: 12px;">>15 LPA</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>AND</p>
+                  <li>2. At Least 80% of the registered candidates must have been placed.</li>
+                  <p>OR</p>
+                  <li>2. No other candidate has qualified for the post.</li>
+                </ol>
+              </li>
+              <li class="sub-next">
+                Every candidate will however get an opportunity to apply
+                for at least 1 Dream Offer Category organisation.
+              </li>
+              
+            <h4> <em>Dream Offer Category </em></h4>
+            
+              <li>
+                If a candidate receives a CTC offer of greater than or equal
+                to INR 15 lakhs, the candidate stands ineligible for further
+                jobs. In the event of an organisation hiring only candidates
+                from Mechanical Disciplines(MDM, MPD, MFD, ME21M1
+                and ME21M2) and offering a CTC offer of greater than or
+                equal to INR 12 lakhs, the offer will be considered as a
+                dream offer.
+              </li>
+              <li class="sub-next">
+                If students are looking for the third offer, he/she can apply to a maximum of 3 companies and the CTC must be at least 1.5 times more than the second offer
+              </li>
+              <ol style="list-style-type: none;" class="cateria">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                  <thead>
+                    <tr style="background-color: #f2f2f2;">
+                      <th style="border: 1px solid #ddd; padding: 12px;"></th>
+                      <th style="border: 1px solid #ddd; padding: 12px;">2nd Offer</th>
+                      <th style="border: 1px solid #ddd; padding: 12px;">Eligibility for the 3rd Offer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="border: 1px solid #ddd; padding: 12px;">Student 1</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">9 LPA</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">>13.50 LPA</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid #ddd; padding: 12px;">Student 2</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">11.25 LPA</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">>16.88 LPA</td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid #ddd; padding: 12px;">Student 3</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">15 LPA</td>
+                      <td style="border: 1px solid #ddd; padding: 12px;">>22.50 LPA</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </ol>
+              
+              <h4> <em>Low CTC Offer Category </em></h4>
+            
+              <li>
+                If a candidate receives a CTC offer of less than or equal to
+                INR 6.5 lakhs, the candidate continues to stand eligible for
+                further jobs.
+              </li>
+              <h4> <em>In case receiving two campus offers </em></h4>
+            
+              <li>
+                If a student receives more than one offer owing to delays in
+        the announcement of results by the recruiters, he/she is
+        bound to accept the job whose results are declared first.
+              </li>
+              <li>
+                If the results are declared on the same day, the student
+        may choose from the offers in hand and inform the
+        placement coordinator within 2 days of the announcement
+        of the results.
+              </li> -->
+        
+              <br>
+              <h4> <u>CS and ECE Branches (BTech, DD and MTech): </u></h4>
+        
+              <li style="display: flex;flex-direction: row;justify-content: center;font-size: 1.4em ;">
+                <p style="margin-top: auto;margin-bottom: auto;">For CSE & ECE core companies</p>
+                <ul style="font-weight: 550;list-style-type:disc;">
+                  <li>Category-1: Upto 7 CTC</li>
+                  <li>Category-2: Upto 7 to 15 CTC</li>
+                  <li>Category-3: Dream offer above 15 CTC</li>
+                </ul>
+              </li>
+        
+              <h3 style="font-size: 1.7rem;"> Rules: </h3>
+        
+              <li>
+                A candidate is eligible for the second job only if <b>ALL</b> the mentioned criteria are met:
+                <ol>
+                  <li>The candidate is only allowed to get one offer from each category mentioned.</li>
+                  <li>The second job offer should come under the other category mentioned.</li>
+                </ol>
+              </li>
+        
+              <li class="sub-next">
+                If a candidate receives a CTC of greater than or equal to INR 15, the candidate stands ineligible
+        for further placements.
+              </li>
+        
+              <li class="sub-next">
+                The same criteria will be applied to other branch students if they apply for software and ECE core
+        companies.
+              </li>
+        
+              <br>
+              <br>
+        
+              <h4> <u> Mech and SM Branches (BTech, DD and MTech): </u> </h4>
+        
+              <li style="display: flex;flex-direction: row;justify-content: center;font-size: 1.4em ;">
+                <p style="margin-top: auto;margin-bottom: auto;">For Mech & SM Core Companies</p>
+                <ul style="font-weight: 550;list-style-type: disc;">
+                  <li>Category-1: Upto 6 CTC</li>
+                  <li>Category-2: Upto 6 to 10 CTC</li>
+                  <li>Category-3: Dream offer above 10 CTC</li>
+                </ul>
+              </li>
+        
+              <h3 style="font-size: 1.7rem;"> Rules: </h3>
+        
+              <li>
+                A candidate is eligible for the second job only if <b>ALL</b> the mentioned criteria are met:
+                <ol>
+                  <li>The candidate is only allowed to get one offer from each category mentioned.</li>
+                  <li>The second job offer should come under the other category mentioned.</li>
+                </ol>
+              </li>
+        
+              <li class="sub-next">
+                If a candidate receives a CTC of greater than or equal to INR 10 CTC, the candidate stands
+        ineligible for further placements.
+              </li>    
+        </div>
+        <div class="tab-button" onclick="showTab('joiningstatus')">Joining Status</div>
+     
+        <div class="tab-content" style="display: none;" id="joiningstatus" style="display: none;">
+            <!-- Content for Joining Status section -->
+            <h2>Joining Status</h2>
+            <ul>
+                <li>Students should notify the company with a copy to the placement office in case they are not joining the company for reasons.</li>
+            </ul>
+        </div>
+        <div class="tab-button" onclick="showTab('notcovered')">Issues not covered</div>
+
+        <div class="tab-content" style="display: none;" id="notcovered">
+            <!-- Content for Issues not covered section -->
+            <h2>Issues not covered</h2>
+            <ul>
+                <li>For all matters not covered by the mentioned regulations, the placement coordinators will use their discretion to take appropriate decisions. Feel free to ask any doubts or questions regarding any of the points mentioned here for the placement procedure.</li>
+            </ul>
+        </div>
+
+        <!-- Add more tab content sections for other sections -->
+    </div>
+
+    <%- include('templates/footer-1.ejs') -%>
+
+    <script>
+        // JavaScript function to show/hide tab content
+        function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.style.display = 'none';
+        });
+
+        const selectedTab = document.getElementById(tabId);
+        if (selectedTab.style.display === 'none' || selectedTab.style.display === '') {
+            selectedTab.style.display = 'block';
+        }
+         else if(selectedTab.style.display === 'block') {
+            selectedTab.style.display = 'none';
+        }
+    }
+    </script>
+</body>
+</html>

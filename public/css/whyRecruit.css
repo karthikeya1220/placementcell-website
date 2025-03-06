@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  outline: 0px;
+  --var--font-weight: 400;
+  --var--font-family: "Inter";
+  --var--font-style: "normal";
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  font-family: "Inter", sans-serif;
+}
+
+.centered {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
+  /* font-family: Rubik; */
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  background-color: var(--custom-extra-dark);
+  padding-top: 10px;
+}
+
+.section {
+  width: 100%;
+  /* height: 90vh; */
+  background-image: url("/img/whyrecruit/campus.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding-top: 1.5rem;
+}
+.section::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* #bg-img::before{
+    top: -80%;
+} */
+
+.whyrecurit {
+  background: linear-gradient(
+    180deg,
+    rgba(67, 153, 244, 0.682) 0%,
+    rgba(101, 183, 208, 0.805) 100%
+  );
+  /* height: fit-content; */
+  /* width: auto; */
+  max-width: 51vw;
+  max-height: 90vh;
+  padding: 10px;
+  border-radius: 20px;
+  float: right;
+  margin-right: 2rem;
+}
+
+.Myheading {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.top {
+  font-family: var(--var--font-family);
+  font-style: var(--var--font-style);
+  font-weight: var(--var--font-weight);
+  font-size: 26px;
+  line-height: 31px;
+  color: #ffffff;
+}
+
+.contents {
+  font-family: var(--var--font-family);
+  font-style: var(--var--font-style);
+  font-weight: var(--var--font-weight);
+  /* font-size: 20px; */
+  /* line-height: 30px; */
+  color: white;
+  word-wrap: break-word;
+}
+
+.section2 {
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.section2-wrapper {
+  background-image: url("../img/icons/Pattern1.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 10px;
+}
+.design_centric {
+  /* width: 850px;
+    height: 570px;
+    max-width: auto;
+    margin-left: 20px;*/
+  padding: 20px;
+  padding-bottom: 30px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  /* border-radius: 10px; */
+  /* background: #fff; */
+  /* color: black; */
+  border-color: #000000;
+}
+.dcc {
+  font-size: 1.1rem;
+  line-height: 1.375rem;
+}
+.mySlides1 {
+  display: none;
+  padding-right: 20px;
+}
+
+#slideshow2 img {
+  max-width: 440px;
+  height: auto;
+  /* max-height: 514px;
+    width: auto; */
+  border-radius: 5px;
+}
+
+.section3 {
+  width: 100%;
+  padding: 15px;
+  /* height: 750px; */
+}
+
+.academic {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  color: #fff;
+  padding: 20px;
+  user-select: none;
+}
+
+.programs {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.programname {
+  border: none;
+  background: linear-gradient(0deg, #7a7a7a, #7a7a7a),
+    linear-gradient(0deg, #7a7a7a, #7a7a7a), #7a7a7a;
+  border-radius: 50%;
+  width: 135px;
+  height: 135px;
+  transform: translate(140px, 30px);
+  padding: 1.4%;
+  transition: all 0.5s;
+  cursor: pointer;
+  outline: none;
+}
+
+.programname {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  justify-content: center;
+}
+
+.content {
+  /* margin-top: 40px; */
+  margin-left: 95px;
+}
+
+/* Academic programs */
+.acad {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+.prog {
+  /* Display vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Flex gap between rows */
+  row-gap: 20px;
+  padding: 10px;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #214B8C !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  /* border-color: #fff !important; */
+  cursor: default !important;
+  padding: 10px 16px !important;
+}
+#btn-1,
+#btn-2,
+#btn-3 {
+  border-radius: 10px;
+}
+.branch {
+  padding: 15px 100px 15px 100px;
+  /* height: 34px; */
+  width: 680px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.branch:hover{
+  border: solid 2px #214B8C;
+  cursor: pointer;
+  color: #214B8C;
+}
+.grid-layout{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width: 780px) {
+  .branch{
+    width: auto;
+  }
+  .section2 {
+    display: block;
+    height: fit-content;
+  }
+  .grid-layout{
+    grid-template-columns: auto;
+  }
+  .design_centric {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: fit-content;
+  }
+
+  #slideshow2 {
+    margin-left: 25%;
+    margin-right: 10%;
+  }
+
+  #slideshow2 img {
+    width: 80%;
+    height: 250px;
+  }
+
+  .section3 {
+    padding: 0px;
+    height: fit-content;
+  }
+
+  .programs {
+    grid-template-columns: auto;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  #slideshow2 img {
+    width: 300px;
+    height: 300px;
+  }
+}
+.active-1{
+  border: solid 2px #214B8C;
+  color: #214B8C;
+  text-decoration: underline;
+  margin-bottom: 0 !important;
+}
+
+.mybtn:hover{
+  border: solid 1px #214B8C;
+}
+@media screen and (max-width: 1200px) {
+  .branch{
+    width:auto
+  }
+  .section1 {
+    margin: 0px;
+    padding: 0px;
+    /* margin-top: 90px; */
+    display: block;
+    width: 100%;
+    height: fit-content;
+  }
+  .grid-layout{
+    grid-template-columns: auto;
+  }
+  .whyrecurit {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    height: fit-content;
+  }
+
+  .design_centric {
+    height: fit-content;
+    width: auto;
+  }
+
+  .programs {
+    grid-template-columns: auto auto;
+    height: 100%;
+  }
+
+  .section3 {
+    height: 100%;
+  }
+
+  #slideshow2 {
+    margin: 0px;
+  }
+
+  #slideshow2 img {
+    width: 80%;
+    /* height: 450px; */
+  }
+}
+
+.achieve h1{
+  padding-bottom: 1.5rem;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.dropdownMenu{
+  display: none;
+  /* Display the dropdown three items horizontally */
+  grid-template-columns: auto auto auto;
+  /* Grid gap between columns */
+  /* vertical border line to after each column */
+  border-left: 1px solid #fff;
+  background-color: #e7e7e7;
+  padding: 10px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  margin-bottom: 20px;
+}
+.dropdownMenu a{
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width: 350px) {
+  .branch{
+    width: auto;
+  }
+  .section1 {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 90px;
+    display: block;
+    width: 100%;
+    height: fit-content;
+  }
+  .grid-layout{
+    grid-template-columns: auto;
+  }
+  .whyrecurit {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    height: fit-content;
+  }
+
+  .design_centric {
+    max-height: fit-content;
+    width: auto;
+    /* margin-top: 600px; */
+  }
+
+  .programs {
+    grid-template-columns: auto;
+    height: 100%;
+  }
+
+  .section3 {
+    height: 100%;
+  }
+
+  .top {
+    font-size: 25px;
+    line-height: 20px;
+  }
+
+  .academic {
+    font-size: 15px;
+    line-height: 7px;
+  }
+
+  #slideshow2 {
+    margin: 0px;
+  }
+
+  .dropbtn {
+    min-width: 290px;
+  }
+}

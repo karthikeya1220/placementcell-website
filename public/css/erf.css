@@ -1,0 +1,25 @@
+body{
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+input{
+    padding: 1rem!important;
+    height: unset!important;
+}
+textarea{
+    height: 10rem!important;
+}
+.jumbotron{
+    padding: 1.5rem!important;
+    background-color: rgba(206, 206, 206, 1)!important;
+    border-radius: 1rem!important;
+    /* filter: invert(); */
+    /* color: white; */
+}
+.form-group{
+    margin-top: 1.5rem;
+}
+.btn{
+    padding: 1rem 3rem 1rem 3rem !important;
+}

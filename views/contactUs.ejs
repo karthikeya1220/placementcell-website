@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Placements Team</title>
+    <link rel="stylesheet" target="_blank"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" target="_blank" href="/css/contactUs.css">
+</head>
+
+<body>
+    <%- include('templates/header-1.ejs') -%>
+
+    <section id="main-section"></section>
+    <script>
+        function appendTeamSection() {
+// update the Json to Update the details of the website
+            var teamData = {
+                "Placements Team": [{
+                        name: "Prof. Jayabal K",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/jayabal.jpeg",
+                        post: "Dean - Academic Affairs",
+                    },
+                    
+                    {
+                        name: "Dr. Priyanka Kokil",
+                        image: "https://www.iiitdm.ac.in/_app/immutable/assets/priyanka.c0da38d1.webp",
+                        post: "PIC - Placements",
+                    },
+                    // {
+                    //     name: "Mr. Azarudeen A",
+                    //     image: "/img/coordinators_2024/TPO.jpg",
+                    //     post: "Training and Placement Officer",
+                    //     contact: "+91 934 461 5687"
+                    // }
+                ],
+                "Faculty Advisors":[
+                    {
+                        name: "Dr. Rahul Raman",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/rahul.jpeg",
+                        post: "Faculty Co-ordinator - CSE"
+                    },
+                    {
+                        name: "Dr. Rohini. P",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/rohinip.jpeg",
+                        post: "Faculty Co-ordinator - ECE"
+                    },
+                    {
+                        name: "Dr. N Rino Nelson",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/rino.jpeg",
+                        post: "Faculty Co-ordinator - ME"
+                    },
+                    {
+                        name: "Dr. Jayachandra Bingi",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/bingi.jpeg",
+                        post: "Faculty Co-ordinator - Design"
+                    },
+                    {
+                        name: "Dr Senthilkumaran K",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/skumaran.jpeg",
+                        post: "Faculty Co-ordinator - ME"
+                    },
+                    {
+                        name: "Dr. Nagaraj. M",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/nagaraj.jpeg",
+                        post: "Faculty Co-ordinator - ME"
+                    },
+                    {
+                        name: "Dr. Narendran G",
+                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/narendrang.jpeg",
+                        post: "Faculty Co-ordinator - SIDI"
+                    },
+                ],
+                "Placement Office": [
+                    {
+                        name: "Mr. Azarudeen A",
+                        image: "/img/coordinators_2024/TPO.jpg",
+                        post: "Training & Placement Officer",
+                        contact: "+91 934 461 5687"
+                    },
+                    {
+                        name: "Mr. Lakshmi Narayan",
+                        image: "/img/coordinators_2024/Asst_TPO.jpg",
+                        post: "Assistant TPO",
+                        contact: "+91 638 149 1608"
+                    },
+                    {
+                        name: "Sanagavarapu Rahul",
+                        image: "/img/rahul.jpg",
+                        post: "Placement  Secretary",
+                        email: "cs21b2006@iiitdm.ac.in",
+                        phone: "+91 70133 10441"
+                    },
+                    {
+                        name: "K N S Sai Sumakar",
+                        image: "/img/sumukar.jpg",
+                        post: "Placement Joint Secretary",
+                        email: "cs22b1077@iiitdm.ac.in",
+                        phone: "+91 63098 20830"
+                    },
+                ],
+                "Student Co-ordinators":  [],
+                // "Computer Science Co-ordinators - Dual Degree":[
+                // {
+                //                 "Timestamp": "07/10/2023 09:59:55",
+                //                 "email": "",
+                //                 "name": "SriHarsha Vajapeyayajula",
+                //                 "Roll Number": "Ced19i043",
+                //                 "post": "Dual Degree in CSE",
+                //                 "phone": "",
+                //                 "image": "/img/coordinators_2023/ced19i043.jpg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 09:59:55",
+                //                 "email": "",
+                //                 "name": "Takasi Manoj",
+                //                 "Roll Number": "",
+                //                 "post": "Dual Degree in CSE",
+                //                 "phone": "",
+                //                 "image": ""
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 09:59:55",
+                //                 "email": "",
+                //                 "name": "Charan Kumar Rampelli",
+                //                 "Roll Number": "Ced19i041",
+                //                 "post": "Dual Degree in CSE",
+                //                 "phone": "",
+                //                 "image": "/img/coordinators_2023/ced19i041.jpg"
+                //             },
+                // ],
+                "Computer Science Co-ordinators - B.Tech.":[
+                    {
+                                "Timestamp": "07/10/2023 09:59:55",
+                                "email": "cs21b1033@iiitdm.ac.in",
+                                "name": "Haran Ritvick Vemula",
+                                "Roll Number": "CS21B1033",
+                                "post": "B.Tech. in CSE",
+                                "phone": "7777877666",
+                                "image": "/img/coordinators_2024/cs21b1033.jpg"
+                            },
+                    {
+                                "Timestamp": "07/01/2023 23:50:36",
+                                "email": "cs21b1075@iiitdm.ac.in",
+                                "name": "Rishikesh",
+                                "Roll Number": "CS21B1075",
+                                "post": "B.Tech. in CSE",
+                                "phone": "8919987405",
+                                "image": "/img/coordinators_2024/cs21b1075.jpg"
+                            },
+                            {
+                                "Timestamp": "07/02/2023 10:43:40",
+                                "email": "cs21b2045@iiitdm.ac.in",
+                                "name": "T L SRINIVAS",
+                                "Roll Number": "CS21B2045",
+                                "post": "B.Tech. in CSE-AI",
+                                "phone": "9550532071",
+                                "image": "/img/coordinators_2024/cs21b2045.png"
+                            },
+                            {
+                                "Timestamp": "07/02/2023 14:39:58",
+                                "email": "cs22b1076@iiitdm.ac.in",
+                                "name": "SANDESH",
+                                "Roll Number": "CS22B1076",
+                                "post": "B.Tech. in CSE",
+                                "phone": "8919701649",
+                                "image": "/img/coordinators_2024/cs22b1076.jpg"
+                            },
+                            
+                            {
+                                "Timestamp": "07/10/2023 10:49:36",
+                                "email": "cs22b1022@iiitdm.ac.in",
+                                "name": "R DARSHAN KARTHIKEYA",
+                                "Roll Number": "CS22B1022",
+                                "post": "B.Tech. in CSE",
+                                "phone": "8297022338",
+                                "image": "/img/coordinators_2024/cs22b1022.jpg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 11:06:23",
+                                "email": "cs22b1025@iiitdm.ac.in",
+                                "name": "KSV PRAVEEN",
+                                "Roll Number": "CS22B1025",
+                                "post": "B.Tech. in CSE",
+                                "phone": "8332929387",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:49:36",
+                                "email": "cs22b1083@iiitdm.ac.in",
+                                "name": "DHARUN THOTA",
+                                "Roll Number": "CS22B1083",
+                                "post": "B.Tech. in CSE",
+                                "phone": "9390211782",
+                                "image": "/img/coordinators_2024/cs22b1083.jpg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:49:36",
+                                "email": "cs23m1009@iiitdm.ac.in",
+                                "name": "OM PRAKASH",
+                                "Roll Number": "CS23M1009",
+                                "post": "B.Tech. in CSE",
+                                "phone": "9472507505",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:49:36",
+                                "email": "cs22b2038@iiitdm.ac.in",
+                                "name": "M BHARAT KUMAR",
+                                "Roll Number": "CS22B2038",
+                                "post": "B.Tech. in CSE-AI",
+                                "phone": "9556797083",
+                                "image": "/img/coordinators_2024/cs22b2038.jpeg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:49:36",
+                                "email": "cs22b2032@iiitdm.ac.in",
+                                "name": "YATHIN",
+                                "Roll Number": "CS22B2032",
+                                "post": "B.Tech. in CSE-AI",
+                                "phone": "7981466508",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                    ],
+                    // "Electronics Co-ordinators - Dual Degree":  [
+                    // {
+                    //             "Timestamp": "07/02/2023 00:08:22",
+                    //             "email": "esd19i017@iiitdm.ac.in",
+                    //             "name": "Shivashish Dash",
+                    //             "Roll Number": "ESD19I017",
+                    //             "post": "Dual Degree in ECE with Specialization Signal Processing",
+                    //             "phone": "9494871385",
+                    //             "image": "/img/coordinators_2023/shivashish.jpeg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/01/2023 23:47:34",
+                    //             "email": "esd19i010@iiitdm.ac.in",
+                    //             "name": "Naveen Kumar Gundluri",
+                    //             "Roll Number": "ESD19I010",
+                    //             "post": "Dual Degree in ECE with Specialization in Signal Processing",
+                    //             "phone": "8688154454",
+                    //             "image": "/img/coordinators_2023/GUNDLURI NAVEEN KUMAR.jpg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 09:45:26",
+                    //             "email": "ec22m1002@iiitdm.ac.in",
+                    //             "name": "Premchand Pawar",
+                    //             "Roll Number": "ec22m1002",
+                    //             "post": "Dual Degree in ECE with Specialization in Signal Processing",
+                    //             "phone": "9052999878",
+                    //             "image": "/img/prem.jpeg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 09:45:26",
+                    //             "email": "",
+                    //             "name": "J Krishna Kant",
+                    //             "Roll Number": "",
+                    //             "post": "Dual Degree in ECE with Specialization in VLSI Design",
+                    //             "phone": "",
+                    //             "image": ""
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 09:45:26",
+                    //             "email": "",
+                    //             "name": "Srikanth",
+                    //             "Roll Number": "",
+                    //             "post": "Dual Degree in ECE with Specialization in Signal Processing",
+                    //             "phone": "",
+                    //             "image": "/img/coordinators_2023/srikanth-dualdegree esd.jpeg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 09:58:25",
+                    //             "email": "evd19i018@iiitdm.ac.in",
+                    //             "name": "Sarath Chandra Jampani",
+                    //             "Roll Number": "EVD19I018",
+                    //             "post": "Dual Degree in ECE with Specialization in VLSI Design",
+                    //             "phone": "8688414366",
+                    //             "image": "/img/coordinators_2023/sharath evd.jpeg"
+                    //         }
+                    //     ],
+                    "Electronics Co-ordinators - B.Tech.":  [
+                            {
+                                "Timestamp": "07/02/2023 00:14:30",
+                                "email": "ec21b1003@iiitdm.ac.in",
+                                "name": "N LALITHAADITHYA",
+                                "Roll Number": "EC21B1003",
+                                "post": "B.Tech. in ECE",
+                                "phone": "7013542188",
+                                "image": "/img/coordinators_2024/adithya.jpg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 09:43:27",
+                                "email": "ec22b1121@iiitdm.ac.in",
+                                "name": "RAJESHWER",
+                                "Roll Number": "EC22B1121",
+                                "post": "B.Tech. in ECE",
+                                "phone": "8273154487",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:39:44",
+                                "email": "ec22b1131@iiitdm.ac.in",
+                                "name": "DHURIKA K",
+                                "Roll Number": "EC22B1131",
+                                "post": "B.Tech. in ECE",
+                                "phone": "9361333759",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            {
+                                "Timestamp": "07/02/2023 20:55:43",
+                                "email": "ec22b1087@iiitdm.ac.in",
+                                "name": "J S SASANK",
+                                "Roll Number": "EC22B1087",
+                                "post": "B.Tech. in ECE",
+                                "phone": "7801021232",
+                                "image": "/img/coordinators_2024/ec22b1087.jpg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 11:03:05",
+                                "email": "ec22b1032@iiitdm.ac.in",
+                                "name": "B CHAITANYA",
+                                "Roll Number": "EC22B1032",
+                                "post": "B.Tech. in ECE",
+                                "phone": "6302025017",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            
+                            {
+                                "Timestamp": "07/10/2023 10:08:00",
+                                "email": "ec22b1062@iiitdm.ac.in",
+                                "name": "SAMARESH",
+                                "Roll Number": "EC22B1063",
+                                "post": "B.Tech. in ECE",
+                                "phone": "7569999788",
+                                "image": "/img/coordinators_2024/ec22b1063.jpg"
+                            },
+                            
+                            {
+                                "Timestamp": "07/10/2023 09:45:26",
+                                "email": "ec22b1110@iiitdm.ac.in",
+                                "name": "PRINCE MAURYA",
+                                "Roll Number": "EC22B1110",
+                                "post": "B.Tech. in ECE",
+                                "phone": "9899091238",
+                                "image": "/img/coordinators_2024/image.png"
+                            }
+
+                    ],
+                // "Electronics Co-ordinators - M.Tech.":[
+                // {
+                //                 "Timestamp": "07/03/2023 15:44:03",
+                //                 "email": "ec22m1005@iiitdm.ac.in",
+                //                 "name": "AKSHAYA LAKSHMI ",
+                //                 "Roll Number": "EC22M1005",
+                //                 "post": "M.Tech. in ECE with specialization in Communication Systems",
+                //                 "phone": "9597409128",
+                //                 "image": "/img/coordinators_2023/AKSHAYA LAKSHMI SANKARANARAYAN.jpg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 09:45:26",
+                //                 "email": "ec22m1002@iiitdm.ac.in",
+                //                 "name": "Guvvala Rishi",
+                //                 "Roll Number": "ec22m1002",
+                //                 "post": "M.Tech. in ECE with specialization in Communication Systems",
+                //                 "phone": "9052999878",
+                //                 "image": "/img/coordinators_2023/RISHI.jpg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 11:13:04",
+                //                 "email": "ec22m2009@iiitdm.ac.in",
+                //                 "name": "Aparna Krishna Kumar",
+                //                 "Roll Number": "EC22M2009",
+                //                 "post": "M.Tech. in ECE with specialization in Microelectronics and VLSI Systems",
+                //                 "phone": "8547202840",
+                //                 "image": "/img/coordinators_2023/APARNA.jpg"
+                //             },
+
+                // ],
+                // "Mechanical Co-ordinators - Dual Degree": [
+                //             {
+                //                 "Timestamp": "07/10/2023 10:12:55",
+                //                 "email": "mfd19i001@iiitdm.ac.in",
+                //                 "name": "Mahankali Sripaad",
+                //                 "Roll Number": "MFD19I001",
+                //                 "post": "Dual Degree in ME with specialization in Advanced Manufacturing",
+                //                 "phone": "9550700200",
+                //                 "image": "/img/coordinators_2023/MAHANKALI SRIPAAD.jpg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 11:30:45",
+                //                 "email": "me20b1011@iiitdm.ac.in",
+                //                 "name": "D Sai Karthikeya",
+                //                 "Roll Number": "Me20b1011",
+                //                 "post": "Dual Degree in ME with specialization in Advanced Manufacturing",
+                //                 "phone": "6374674417",
+                //                 "image": "/img/coordinators_2023/karthikeya.jpeg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/02/2023 00:05:57",
+                //                 "email": "mpd19i004@iiitdm.ac.in",
+                //                 "name": "Sri Maddukuri",
+                //                 "Roll Number": "MPD19I004",
+                //                 "post": "Dual Degree in ME with specialization in Product Design",
+                //                 "phone": "8885201141",
+                //                 "image": "/img/coordinators_2023/MADDUKURI SRI.jpg"
+                //             },
+                // ],
+                "Mechanical Co-ordinators - B.Tech.": [
+                            {
+                                "Timestamp": "07/02/2023 11:51:27",
+                                "email": "me22b2005@iiitdm.ac.in",
+                                "name": "NAGENDRA KUMAR",
+                                "Roll Number": "ME22B2005",
+                                "post": "B.Tech. in ME",
+                                "phone": "9014486017",
+                                "image": "/img/coordinators_2024/me22b2005.jpg"
+                            },
+                            {
+                                "Timestamp": "07/10/2023 10:38:11",
+                                "email": "me22b2006@iiitdm.ac.in",
+                                "name": " BHARGAVA TEJA",
+                                "Roll Number": "ME22B2006",
+                                "post": "B.Tech. in ME",
+                                "phone": "8317509259",
+                                "image": "/img/coordinators_2024/me22b2006.jpg"
+                            },
+                            // {
+                            //     "Timestamp": "07/10/2023 11:30:45",
+                            //     "email": "me22b1049@iiitdm.ac.in",
+                            //     "name": "NARENDRAN",
+                            //     "Roll Number": "ME22B1049",
+                            //     "post": "B.Tech. in ME",
+                            //     "phone": "9080543921",
+                            //     "image": "/img/coordinators_2024/image.png"
+                            // },
+                            {
+                                "Timestamp": "07/10/2023 11:30:45",
+                                "email": "me22b1059@iiitdm.ac.in",
+                                "name": "MAZHAR HUSSAIN",
+                                "Roll Number": "ME22B1059",
+                                "post": "B.Tech. in ME",
+                                "phone": "9502389499",
+                                "image": "/img/coordinators_2024/image.png"
+                            },
+                            // {
+                            //     "Timestamp": "07/10/2023 11:30:45",
+                            //     "email": "me20b1011@iiitdm.ac.in",
+                            //     "name": "M Pavan Kalyan",
+                            //     "Roll Number": "ME20B1020",
+                            //     "post": "B.Tech. in ME",
+                            //     "phone": "8919706048",
+                            //     "image": "/img/pavan.jpeg"
+                            // },
+                            // {
+                            //     "Timestamp": "07/10/2023 11:30:45",
+                            //     "email": "me20b1011@iiitdm.ac.in",
+                            //     "name": "A Yashvardhan Sai",
+                            //     "Roll Number": "ME20B1031",
+                            //     "post": "B.Tech. in ME",
+                            //     "phone": "6300695169",
+                            //     "image": "/img/yash.jpeg"
+                            // },
+                ],
+                // "Mechanical Co-ordinators - M.Tech.":[
+                // {
+                //                 "Timestamp": "07/10/2023 11:30:45",
+                //                 "email": "me20b1011@iiitdm.ac.in",
+                //                 "name": "Naveen Chakravarthi P",
+                //                 "Roll Number": "Me20b1011",
+                //                 "post": "M.Tech. in ME with specialization in Mechanical System Design",
+                //                 "phone": "6374674417",
+                //                 "image": "https://th.bing.com/th/id/OIP.xo-BCC1ZKFpLL65D93eHcgHaGe?w=251&h=219&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 11:30:45",
+                //                 "email": "me20b1011@iiitdm.ac.in",
+                //                 "name": "Sagar Kumar Jha",
+                //                 "Roll Number": "Me20b1011",
+                //                 "post": "M.Tech. in ME with specialization in Smart Manufacturing",
+                //                 "phone": "6374674417",
+                //                 "image": "/img/sagar.jpeg"
+                //             },
+                //             {
+                //                 "Timestamp": "07/10/2023 10:52:56",
+                //                 "email": "me22m2002@iiitdm.ac.in",
+                //                 "name": "Ragunanthan",
+                //                 "Roll Number": "ME22M2002",
+                //                 "post": "M.Tech Smart Manufacturing",
+                //                 "phone": "9789264673",
+                //                 "image": "/img/coordinators_2023/RAGUNANTHAN V.jpg"
+                //             }
+                // ],
+                    "Design Co-ordinators - M.Des.":[
+                    {
+                                "Timestamp": "07/10/2023 10:33:55",
+                                "email": "id23m1004@iiitdm.ac.in",
+                                "name": "Dhanraj Khamble",
+                                "Roll Number": "ID23M1004",
+                                "post": "M.Des. ",
+                                "phone": "9141442770",
+                                "image": "/img/coordinators_2024/dhanraj.jpg"
+                            },
+                    // {
+                    //             "Timestamp": "07/10/2023 09:53:23",
+                    //             "email": "id22m1001@iiitdm.ac.in",
+                    //             "name": "Raakeshwaran S",
+                    //             "Roll Number": "ID22M1001",
+                    //             "post": "M.Des. in integrated Product Design",
+                    //             "phone": "8248976997",
+                    //             "image": "/img/coordinators_2023/Raakeswaran.jpg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 11:08:13",
+                    //             "email": "id22m1003@iiitdm.ac.in",
+                    //             "name": "Durgesh Prakash Tekale",
+                    //             "Roll Number": "ID22M1003",
+                    //             "post": "M.Des. in integrated Product Design",
+                    //             "phone": "9766501943",
+                    //             "image": "/img/coordinators_2023/DURGESH.jpg"
+                    //         },
+                    //         {
+                    //             "Timestamp": "07/10/2023 11:08:13",
+                    //             "email": "id22m1005@iiitdm.ac.in",
+                    //             "name": "Vignesh",
+                    //             "Roll Number": "ID22M1005",
+                    //             "post": "M.Des. in integrated Product Design",
+                    //             "phone": "9766501943",
+                    //             "image": "/img/coordinators_2023/id22m1005.jpg"
+                    //         }
+                    ]
+                    
+            };
+
+
+            // Get the section element by ID
+            var section = document.getElementById("main-section");
+
+            // Create the HTML code dynamically by traversing the JSON object
+            var htmlCode = "";
+
+            for (var title in teamData) {
+                if (title == "Student Co-ordinators") {
+                    htmlCode += `<header class="ml-5 pt-5" style="text-align: center;">
+                                <h2 class="font-weight-dark">${title}</h2>
+                                </header>
+                                <section class="team mt-5">
+                                <div class="row no-gutters" style="column-gap: 40px;">`
+                } else if (title == "Placements Team") {
+                    htmlCode += `  
+                            <header class="ml-5 pt-5">
+                                <h2 class="font-weight-dark">${title}</h2>
+                            </header>
+                        <section class="team mt-5" style="margin: 20px;"> <!-- Increase margin -->
+                                <div class="row no-gutters" style="column-gap:40px;">`;
+                } else {
+                    htmlCode += `  
+                            <header class="ml-5 pt-5">
+                                <h2 class="font-weight-dark">${title}</h2>
+                            </header>
+                        <section class="team mt-5">
+                                <div class="row no-gutters" style="column-gap:40px;">`;
+                }
+
+                teamData[title].forEach(member => {
+                    if (title == "Placements Team") {
+                                // Adjust card size and margin for all cards
+                                htmlCode += `<div class="text-center profile-card large-card" style="margin-bottom: 20px;margin-right:80px"> <!-- Increase card size and margin -->
+                                    <div class="box big_box ">
+                                        <div class="avtar">
+                                            <img class="img-fluid" src="${member.image}">
+                                        </div>
+                                        <div class="box-content">
+                                            <h5 class="title">${member.name}</h5>
+                                            <span class="post">${member.post}</span><br>`;
+
+                    }
+                    else{
+                            // Adjust card size and margin for all cards
+                            htmlCode += `<div class="text-center profile-card large-card" style="margin-bottom: 20px;"> <!-- Increase card size and margin -->
+                                    <div class="box big_box ">
+                                        <div class="avtar">
+                                            <img class="img-fluid" src="${member.image}">
+                                        </div>
+                                        <div class="box-content">
+                                            <h5 class="title">${member.name}</h5>
+                                            <span class="post">${member.post}</span><br>`;
+
+                    }
+                    
+                    // Additional contact details for Placement Office
+                    if (member.contact) {
+                        htmlCode += `<p>${member.contact}</p>`;
+                    }
+
+                    // Additional email and phone details for Placement Office
+                    if (member.email && member.phone) {
+                        htmlCode += `<a target="_blank" href="mailto:${member.email}" class="mail-margin">${member.email}</a><br>
+                                        <a target="_blank" href="#"><i class="fa fa-phone" aria-hidden="true"></i> ${member.phone}</a>`;
+                    }
+
+                    htmlCode += `</div>
+                                    </div>
+                                </div>`;
+                });
+
+                htmlCode += `</div>
+                            </section>`;
+            }
+
+            // Append the HTML code to the section
+            section.innerHTML = htmlCode;
+        }
+
+        // Call the function to append the team section
+        appendTeamSection();
+    </script>
+    <!-- <div class="contact-card">
+        <h2 class="font-weight-dark">Contact Information</h2>
+        <p class="address">
+          Address:<br>
+          IIITDM Kancheepuram,<br>
+          Vandalur-Kelambakkam Road,<br>
+          Chennai: 600127.
+        </p>
+        <p class="phone">+91-44-2747 6316</p>
+        <p class="email">placement@iiitdm.ac.in</p>
+    </div> -->
+      
+      
+
+    <%- include('templates/footer-1.ejs') -%>
+</body>
+
+</html>
