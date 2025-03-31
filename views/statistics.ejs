@@ -89,6 +89,48 @@
     .stats-section {
       transition: opacity 0.3s ease;
     }
+
+    .stats-overview {
+      padding: 3rem 0;
+      background: #f8f9fa;
+      border-radius: 15px;
+      margin: 0 auto 4rem;
+      max-width: 1200px;
+      width: 95%;
+    }
+
+    .table-row:hover {
+      background-color: #f5f5f5;
+      transform: translateX(5px);
+    }
+
+    .table-container {
+      transition: transform 0.3s ease;
+    }
+
+    .table-container:hover {
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .stats-overview {
+        padding: 2rem 1rem;
+        width: 98%;
+      }
+      
+      .table-container {
+        width: 98% !important;
+      }
+      
+      .stats-overview .text-center {
+        font-size: 2rem !important;
+      }
+      
+      .table th, .table td {
+        padding: 15px !important;
+        font-size: 1rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -130,62 +172,9 @@
 
     <!-- Current Year Statistics (2024-25) -->
     <div id="current-stats" class="stats-section">
-      <div class="container container2 mt-5">
-        <div class="row">
-          <div class="col-12">
-            <div id="placement-stats" style="width: 100%; height: 400px;"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container container2 mt-5">
-        <div class="row">
-          <div class="col-12">
-            <div id="yearlyStats" style="width: 100%; height: 400px;"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mb-5" style="
-      color: #1a237e;
-      font-weight: 600;
-      font-family: 'Inter', sans-serif;
-      font-style: normal;
-      font-size: 1.8rem;
-      padding: 15px;
-      margin: 20px auto;
-      border-bottom: 3px solid #00ffe0;
-      max-width: 70%;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    ">
-      Percentage of Students Placed
-      <br>
-      <span style="font-size: 1.4rem; color: #424242;"></span>
-    </div>
 
 
-      <div class="d-flex flex-column align-items-center  justify-content-center mb-3 " style="padding-left: 3%;">
-        <div class="table-container">
-          <table class="table mx-auto" id="my-table">
-            <tr class="my-th">
-              <th scope="col">Details</th>
-              <th scope="col">Numbers</th>
-            </tr>
-            <tr class="table-row">
-              <td>No. of students registered for the Placements</td>
-              <td>319</td>
-            </tr>
-            <tr>
-              <td>No. of offers received</td>
-              <td>195</td>
-            </tr>
-            <tr>
-              <td>Percentage of offers received</td>
-              <td>61.13</td>
-            </tr>
-          </table>
-        </div>
+      <div class="d-flex flex-column align-items-center  justify-content-center mb-3 " style="padding-left: 3%;">  
         <div class="text-center mb-5" style="
           color: #1a237e;
           font-weight: 600;
@@ -368,6 +357,103 @@
       </div>
 
       <div class="d-flex justify-content-around">
+        <div id="branch-wise" style="width:50%; height:400px;" class="text-center"></div>
+        <div id="degree-wise" style="width:50%; height:400px;" class="text-center"></div>
+      </div>
+    </div>
+
+    <!-- Past Year Statistics (2023-24) -->
+
+    <div id="past-stats" class="stats-section" style="display: none;">
+      <!-- Add after the stats-overview section and before the branch-wise tables -->
+      <div class="yearly-stats-container" style="
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        padding: 2rem;
+        margin: 0 auto 4rem;
+        max-width: 1200px;
+        width: 95%;
+      ">
+        <div class="text-center mb-4" style="
+          color: #1a237e;
+          font-weight: 600;
+          font-family: 'Inter', sans-serif;
+          font-size: 2rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        ">
+          Yearly Placement Statistics
+          <div style="
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00ffe0, #1a237e);
+            margin: 1rem auto 0;
+            border-radius: 2px;">
+          </div>
+        </div>
+        <div id="placement-stats" style="width: 100%; height: 400px;"></div>
+      </div>
+
+      <div class="stats-overview">
+        <!-- Add the percentage section at the beginning with improved UI -->
+        <div class="text-center mb-5" style="
+          color: #1a237e;
+          font-weight: 600;
+          font-family: 'Inter', sans-serif;
+          font-style: normal;
+          font-size: 2.5rem;
+          padding: 25px;
+          margin: 30px auto;
+          border-bottom: 3px solid #00ffe0;
+          max-width: 80%;
+          text-transform: uppercase;
+          letter-spacing: 1.2px;
+          position: relative;
+        ">
+          Percentage of Students Placed
+          <div style="
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #00ffe0, #1a237e);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center justify-content-center mb-5">
+          <div class="table-container" style="
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            width: 75%;
+            max-width: 1000px;
+            margin: 0 auto;
+          ">
+            <table class="table mx-auto" id="my-table" style="margin: 0;">
+              <tr class="my-th" style="background: linear-gradient(90deg, #1a237e, #304ffe);">
+                <th scope="col" style="color: white; padding: 20px; font-size: 1.3rem; text-align: center;">Details</th>
+                <th scope="col" style="color: white; padding: 20px; font-size: 1.3rem; text-align: center;">Numbers</th>
+              </tr>
+              <tr class="table-row" style="transition: all 0.3s;">
+                <td style="padding: 25px; font-size: 1.2rem;">No. of students registered for the Placements</td>
+                <td style="padding: 25px; font-size: 1.2rem; font-weight: 500; text-align: center;">319</td>
+              </tr>
+              <tr class="table-row" style="transition: all 0.3s;">
+                <td style="padding: 25px; font-size: 1.2rem;">No. of offers received</td>
+                <td style="padding: 25px; font-size: 1.2rem; font-weight: 500; text-align: center;">195</td>
+              </tr>
+              <tr class="table-row" style="transition: all 0.3s;">
+                <td style="padding: 25px; font-size: 1.2rem;">Percentage of offers received</td>
+                <td style="padding: 25px; font-size: 1.2rem; font-weight: 600; color: #1a237e; text-align: center;">61.13%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around">
         <div class="table-container">
           <table class="table" id="my-table-2">
             <thead>
@@ -435,16 +521,11 @@
           <div class="table-caption">Course wise placement statistics for 2023-2024</div>
         </div>
       </div>
-      </div>
+
       <div class="d-flex justify-content-around">
         <div id="branch-wise" style="width:50%; height:400px;" class="text-center"></div>
         <div id="degree-wise" style="width:50%; height:400px;" class="text-center"></div>
       </div>
-    </div>
-
-    <!-- Past Year Statistics (2023-24) -->
-    <div id="past-stats" class="stats-section" style="display: none;">
-      <!-- ... existing 2023-24 statistics content ... -->
     </div>
 
     <%- include('templates/footer-1.ejs') -%>
