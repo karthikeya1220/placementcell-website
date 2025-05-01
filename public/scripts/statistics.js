@@ -23,10 +23,10 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 	  var data = google.visualization.arrayToDataTable([
 	["Branch", "offers"],
-	["CSE",75],
+	["CSE",82],
 	["ECE", 45],
-	["ME", 26],
-	["MSM", 11],
+	["ME", 28],
+	["MSM", 12],
   ]);
 
   var options = {
@@ -50,7 +50,7 @@ google.charts.setOnLoadCallback(drawMyChart);
 function drawMyChart() {
 	  var data = google.visualization.arrayToDataTable([
 	["Course", "offers"],
-	["B.Tech", 157],
+	["B.Tech", 167],
 	["M.Tech", 14],
   ]);
 
