@@ -84,7 +84,7 @@
                     },
                     {
                         name: "Dr. Anushree P Khandale",
-                        image: "https://mis.iiitdm.ac.in/Profile/images/Profile/rohinip.jpeg",
+                        image: "/img/faculty/anushree.png",
                         post: "Faculty Co-ordinator - Science and Humanities"
                     },
                 ],
@@ -93,12 +93,14 @@
                         name: "Mr. Azarudeen A",
                         image: "/img/coordinators_2024/TPO.jpg",
                         post: "Training & Placement Officer",
+                        email:"placement@iiitdm.ac.in",
                         contact: "+91 934 461 5687"
                     },
                     {
                         name: "Mr. Lakshmi Narayan",
                         image: "/img/coordinators_2024/Asst_TPO.jpg",
                         post: "Assistant TPO",
+                        email:"placement@iiitdm.ac.in",
                         contact: "+91 638 149 1608"
                     },
                     {
@@ -110,7 +112,7 @@
                         name: "N Supriya",
                         image: "/img/joint-sec.jpg",
                         post: "Placement Joint Secretary",
-                        email: "cs22b2033@iiitdm.ac.in",
+                        email: "ec23b1011@iiitdm.ac.in",
                     },
                 ],
                 "Student Co-ordinators": [
@@ -742,15 +744,35 @@
 
                     }
                     
-                    // Additional contact details for Placement Office
-                    if (member.contact) {
-                        htmlCode += `<p>${member.contact}</p>`;
-                    }
+                    // Special handling for TPO and ATPO - display email first, then contact
+                    if (title === "Placement Office" && (member.name.includes("Mr. Azarudeen A") || member.name.includes("Mr. Lakshmi Narayan"))) {
+                        // Display email first for TPO and ATPO
+                        if (member.email) {
+                            htmlCode += `<a target="_blank" href="mailto:${member.email}" class="mail-margin" style="display: block; margin: 5px 0;"><i class="fa fa-envelope" aria-hidden="true"></i> ${member.email}</a>`;
+                        }
+                        // Then display contact (mobile)
+                        if (member.contact) {
+                            htmlCode += `<p style="margin: 5px 0;"><i class="fa fa-phone" aria-hidden="true"></i> ${member.contact}</p>`;
+                        }
+                    } else {
+                        // Original logic for other members
+                        // Additional contact details for Placement Office
+                        if (member.contact) {
+                            htmlCode += `<p>${member.contact}</p>`;
+                        }
 
-                    // Additional email and phone details for Placement Office
-                    if (member.email && member.phone) {
-                        htmlCode += `<a target="_blank" href="mailto:${member.email}" class="mail-margin">${member.email}</a><br>
-                                        <a target="_blank" href="#"><i class="fa fa-phone" aria-hidden="true"></i> ${member.phone}</a>`;
+                        // Additional email details
+                        if (member.email) {
+                            htmlCode += `<a target="_blank" href="mailto:${member.email}" class="mail-margin">${member.email}</a>`;
+                            if (member.phone) {
+                                htmlCode += `<br>`;
+                            }
+                        }
+
+                        // Additional phone details
+                        if (member.phone) {
+                            htmlCode += `<a target="_blank" href="#"><i class="fa fa-phone" aria-hidden="true"></i> ${member.phone}</a>`;
+                        }
                     }
 
                     htmlCode += `</div>
